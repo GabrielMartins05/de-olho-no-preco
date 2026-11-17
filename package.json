@@ -1,0 +1,11 @@
+{
+  "name": "de-olho-no-preco",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site local que acompanha preços de jogos e produtos (Steam, Amazon) com histórico",
+  "scripts": {
+    "start": "node servidor.mjs --abrir",
+    "coletar": "node coletor.mjs"
+  }
+}

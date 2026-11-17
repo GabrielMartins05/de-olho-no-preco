@@ -1,0 +1,96 @@
+name: Coletar preços
+
+on:
+  schedule:
+    - cron: '17 */6 * * *' # a cada 6 horas
+  workflow_dispatch:
+    inputs:
+      acao:
+        description: 'coletar | adicionar | remover | tipo'
+        default: 'coletar'
+      id:
+        description: 'ID do produto (remover, tipo, ou coletar só um)'
+        default: ''
+      nome:
+        description: 'Nome do produto (adicionar)'
+        default: ''
+      busca:
+        description: 'Termo de busca (opcional)'
+        default: ''
+      tipo:
+        description: 'auto | jogo | produto'
+        default: 'auto'
+      imagem:
+        description: 'Link de imagem (opcional)'
+        default: ''
+      steam:
+        description: 'Link/ID da Steam (opcional)'
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Uma coleta por vez; pedidos novos esperam a anterior terminar
+concurrency:
+  group: coletar
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.publicar.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      # Os valores vêm por variável de ambiente (nunca colados no comando), pra evitar injeção
+      - name: Executar pedido
+        id: pedido
+        env:
+          ACAO: ${{ inputs.acao || 'coletar' }}
+          ID: ${{ inputs.id }}
+          NOME: ${{ inputs.nome }}
+          BUSCA: ${{ inputs.busca }}
+          TIPO: ${{ inputs.tipo }}
+          IMAGEM: ${{ inputs.imagem }}
+          STEAM: ${{ inputs.steam }}
+        run: node gerenciar.mjs
+
+      - name: Salvar dados no repositório
+        env:
+          MENSAGEM: ${{ steps.pedido.outputs.mensagem }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add produtos.json dados/
+          if git diff --cached --quiet; then
+            echo "Nada mudou"
+            exit 0
+          fi
+          git commit -m "$MENSAGEM"
+          for tentativa in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
+
+      - name: Gerar site
+        run: node gerarSite.mjs
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Publicar
+        id: publicar
+        uses: actions/deploy-pages@v4

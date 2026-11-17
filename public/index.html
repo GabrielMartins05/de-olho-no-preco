@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>De Olho no Preço</title>
+<meta name="theme-color" content="#0f1115">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="De Olho">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root {
+    --fundo: #0f1115;
+    --cartao: #171a21;
+    --cartao2: #1e222b;
+    --borda: #2a2f3a;
+    --texto: #e8eaf0;
+    --suave: #9aa1b2;
+    --verde: #3ddc84;
+    --amarelo: #ffc857;
+    --vermelho: #ff6b6b;
+    --azul: #5aa9ff;
+    --steam: #66c0f4;
+    --amazon: #ff9900;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fundo); color: var(--texto);
+    font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  a { color: var(--azul); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 980px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -0.5px; }
+  h1 span { color: var(--verde); }
+  .status { color: var(--suave); font-size: 13px; }
+
+  button, .botao {
+    background: var(--cartao2); color: var(--texto); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 8px 14px; font: inherit; font-size: 14px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  button:hover, .botao:hover { border-color: var(--suave); text-decoration: none; }
+  button.principal { background: var(--verde); color: #0b1a10; border-color: var(--verde); font-weight: 600; }
+  button:disabled { opacity: .5; cursor: wait; }
+  button.perigo:hover { border-color: var(--vermelho); color: var(--vermelho); }
+
+  .adicionar { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; padding: 14px; margin-bottom: 20px; }
+  .adicionar summary { cursor: pointer; font-weight: 600; }
+  .adicionar form { display: grid; grid-template-columns: 1.4fr 1.4fr 1fr 1fr 1fr auto; gap: 8px; margin-top: 12px; }
+  select.tipo { padding: 4px 8px; font-size: 13px; background: rgba(15,17,21,.6); cursor: pointer; }
+  .tipo-linha { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px; color: var(--suave); }
+  .adicionar input, .adicionar select, select.tipo {
+    background: var(--fundo); color: var(--texto); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 8px 10px; font: inherit; min-width: 0;
+  }
+  .dica { color: var(--suave); font-size: 12px; margin-top: 6px; }
+
+  .produto { background: var(--cartao); border: 1px solid var(--borda); border-radius: 14px; padding: 20px; margin-bottom: 20px; }
+  .produto { padding: 0; overflow: hidden; }
+  .produto-corpo { padding: 20px; }
+  .produto-topo {
+    position: relative; display: grid; grid-template-columns: 320px 1fr auto; gap: 20px;
+    align-items: center; padding: 20px; background: var(--cartao2); border-bottom: 1px solid var(--borda);
+  }
+  .produto-topo::before {
+    content: ""; position: absolute; inset: 0; background: var(--fundo-capa) center / cover no-repeat;
+    filter: blur(28px) saturate(1.3); opacity: .28; pointer-events: none;
+  }
+  .produto-topo > * { position: relative; }
+  .capa {
+    width: 100%; aspect-ratio: 460 / 215; object-fit: cover; border-radius: 10px; display: block;
+    box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--fundo);
+  }
+  .capa.foto { object-fit: contain; background: #fff; padding: 8px; }
+  .capa.sem { display: grid; place-items: center; font-size: 48px; font-weight: 700; color: var(--suave); border: 1px dashed var(--borda); }
+  .produto h2 { margin: 0 0 4px; font-size: 24px; text-transform: none; }
+  .acoes { align-self: flex-start; }
+  .melhor { font-size: 34px; font-weight: 700; letter-spacing: -1px; line-height: 1.1; }
+  .melhor small { font-size: 14px; font-weight: 400; color: var(--suave); letter-spacing: 0; }
+  .acoes { display: flex; gap: 8px; }
+  .acoes button { background: rgba(15,17,21,.6); }
+
+  .selos { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .selo { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--cartao2); color: var(--suave); }
+  .selo.verde { background: rgba(61,220,132,.15); color: var(--verde); }
+  .selo.amarelo { background: rgba(255,200,87,.15); color: var(--amarelo); }
+
+  .resumo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 18px 0; }
+  .caixa { background: var(--cartao2); border-radius: 10px; padding: 10px 12px; }
+  .caixa .rotulo { font-size: 12px; color: var(--suave); }
+  .caixa .valor { font-size: 18px; font-weight: 600; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 12px; color: var(--suave); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--borda); }
+  td { padding: 9px 8px; border-bottom: 1px solid var(--borda); vertical-align: top; }
+  td.num { text-align: right; white-space: nowrap; }
+  th.num { text-align: right; }
+  .loja { font-weight: 600; white-space: nowrap; }
+  .loja i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; }
+  .riscado { color: var(--suave); text-decoration: line-through; font-size: 12px; margin-right: 6px; }
+  .desc { color: var(--verde); font-weight: 700; font-size: 12px; margin-left: 4px; }
+  .erro { color: var(--vermelho); font-size: 13px; }
+  .vazio { color: var(--suave); font-size: 13px; }
+  tr.melhor-linha td { background: rgba(61,220,132,.06); }
+
+  h3 { font-size: 14px; color: var(--suave); font-weight: 600; margin: 20px 0 8px; text-transform: uppercase; letter-spacing: .5px; }
+  .grafico { background: var(--cartao2); border-radius: 10px; padding: 12px; }
+  .grafico svg { width: 100%; height: 170px; display: block; }
+  .legenda { display: flex; gap: 14px; font-size: 12px; color: var(--suave); margin-top: 6px; }
+  .legenda i { display: inline-block; width: 10px; height: 3px; margin-right: 5px; vertical-align: middle; }
+
+  .manuais { display: flex; gap: 8px; flex-wrap: wrap; }
+  .conf { display: inline-block; font-size: 10.5px; font-weight: 600; padding: 1px 7px; border-radius: 999px; margin-top: 3px; cursor: help; letter-spacing: .2px; }
+  .conf.oficial { background: rgba(61,220,132,.15); color: var(--verde); }
+  .conf.grande { background: rgba(90,169,255,.15); color: var(--azul); }
+  .conf.marketplace { background: rgba(255,200,87,.15); color: var(--amarelo); }
+  .manuais .conf { margin: 0; }
+  .detalhe { font-size: 12px; color: var(--suave); margin-top: 2px; }
+  .detalhe b { color: var(--amarelo); font-weight: 600; }
+  tr.primeira td { border-top: 1px solid #3a4150; }
+  .avisos { margin: 10px 0 0; padding-left: 18px; color: var(--suave); font-size: 12.5px; }
+  .avisos li { margin: 2px 0; }
+  .avisos b { color: var(--texto); font-weight: 600; }
+  .vazio-geral { text-align: center; color: var(--suave); padding: 40px; }
+
+  .container { padding-top: max(24px, env(safe-area-inset-top)); padding-bottom: max(60px, env(safe-area-inset-bottom)); }
+  .topo-botoes { display: flex; gap: 8px; }
+  .topo-botoes button[hidden] { display: none; }
+
+  .aviso {
+    position: fixed; left: 50%; bottom: max(20px, env(safe-area-inset-bottom)); transform: translate(-50%, 140%);
+    background: var(--cartao2); border: 1px solid var(--borda); color: var(--texto); padding: 12px 16px; border-radius: 12px;
+    width: min(92vw, 520px); box-shadow: 0 10px 30px rgba(0,0,0,.5); transition: transform .25s ease; z-index: 10; font-size: 14px;
+  }
+  .aviso.visivel { transform: translate(-50%, 0); }
+  .aviso.ok { border-color: var(--verde); }
+  .aviso.erro { border-color: var(--vermelho); }
+
+  dialog {
+    background: var(--cartao); color: var(--texto); border: 1px solid var(--borda); border-radius: 14px;
+    width: min(94vw, 520px); padding: 20px; max-height: 88vh; overflow: auto;
+  }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+  dialog h2 { margin: 0 0 8px; font-size: 19px; }
+  dialog ol { padding-left: 20px; margin: 10px 0; font-size: 14px; }
+  dialog li { margin: 5px 0; }
+  dialog input {
+    width: 100%; background: var(--fundo); color: var(--texto); border: 1px solid var(--borda);
+    border-radius: 8px; padding: 10px; font: inherit; margin: 6px 0 12px;
+  }
+  dialog .linha-botoes { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+  .motivo { background: rgba(255,200,87,.12); color: var(--amarelo); padding: 8px 10px; border-radius: 8px; font-size: 14px; }
+  code { background: var(--cartao2); padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+
+  @media (max-width: 680px) {
+    h1 { font-size: 22px; }
+    header { align-items: stretch; }
+    .topo-botoes { width: 100%; }
+    .topo-botoes .principal { flex: 1; justify-content: center; padding: 11px; }
+    .adicionar form { grid-template-columns: 1fr; }
+    .adicionar input, .adicionar select { padding: 11px 10px; font-size: 16px; }
+    .resumo { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .caixa { padding: 8px; }
+    .caixa .valor { font-size: 14px; }
+    .caixa .rotulo { font-size: 11px; }
+    .produto-topo { grid-template-columns: 1fr auto; padding: 14px; gap: 12px; }
+    .produto-topo .capa { grid-column: 1 / -1; }
+    .produto-corpo { padding: 14px; }
+    .melhor { font-size: 28px; }
+
+    thead { display: none; }
+    table, tbody { display: block; }
+    tr { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 9px 4px; border-bottom: 1px solid var(--borda); }
+    td { border: 0; padding: 0; }
+    td.loja { grid-column: 1 / -1; }
+    td.loja:empty { display: none; }
+    td.loja br { display: none; }
+    td.loja .conf { margin-left: 6px; }
+    td.msg { grid-column: 1 / -1; }
+    td.menor { display: none; }
+    tr.primeira { border-top: 1px solid #3a4150; }
+    tr.primeira td { border-top: 0; }
+    td.num { align-self: start; }
+    tr.melhor-linha { background: rgba(61,220,132,.07); border-radius: 8px; }
+    tr.melhor-linha td { background: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>De Olho no <span>Preço</span></h1>
+      <div class="status" id="status">Carregando…</div>
+    </div>
+    <div class="topo-botoes">
+      <button class="principal" id="btnAtualizar">↻ Atualizar preços agora</button>
+      <button id="btnConfig" title="Conectar ao GitHub" hidden>⚙</button>
+    </div>
+  </header>
+
+  <div class="aviso" id="aviso" role="status"></div>
+
+  <dialog id="config">
+    <h2>Conectar ao GitHub</h2>
+    <p class="motivo" id="configMotivo" hidden></p>
+    <p style="font-size:14px;color:var(--suave);margin:6px 0">
+      Ver os preços não precisa de nada. Pra <b>adicionar, remover ou atualizar</b> pelo app, ele precisa de uma chave (token) que só pode mexer no robô deste site.
+      A chave fica salva <b>só neste aparelho</b>.
+    </p>
+    <ol>
+      <li>Abra <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com → criar token</a> (logado na sua conta).</li>
+      <li><b>Token name:</b> <code>De Olho no Preço</code> · <b>Expiration:</b> 1 ano (ou o que preferir).</li>
+      <li><b>Repository access:</b> <i>Only select repositories</i> → escolha <b id="linkRepo">o repositório do site</b>.</li>
+      <li><b>Permissions → Repositories → Actions:</b> <i>Read and write</i>. Não precisa de mais nada.</li>
+      <li>Clique em <i>Generate token</i>, copie e cole aqui:</li>
+    </ol>
+    <input id="configToken" type="password" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+    <p id="configEstado" style="font-size:13px;color:var(--suave);margin:0 0 12px"></p>
+    <div class="linha-botoes">
+      <button id="configSair" class="perigo">Desconectar</button>
+      <button id="configFechar">Fechar</button>
+      <button id="configSalvar" class="principal">Salvar</button>
+    </div>
+  </dialog>
+
+  <details class="adicionar">
+    <summary>＋ Adicionar produto</summary>
+    <form id="formAdd">
+      <input name="nome" placeholder="Nome (ex: Hollow Knight, Tênis Nike Air Max 90)" required>
+      <select name="tipo" title="O que é o produto?">
+        <option value="auto">Tipo: detectar sozinho</option>
+        <option value="jogo">Jogo de PC</option>
+        <option value="produto">Produto (tênis, roupa, eletrônico…)</option>
+      </select>
+      <input name="busca" placeholder="Termo de busca (opcional)">
+      <input name="steamAppId" placeholder="Link/ID Steam (opcional)">
+      <input name="imagem" placeholder="Link da imagem (opcional)">
+      <button class="principal" type="submit">Adicionar</button>
+    </form>
+    <div class="dica">No modo "detectar sozinho", se o nome for de um jogo da Steam ele vira <b>Jogo de PC</b> (Steam, GOG, Nuuvem e Amazon). Se não for, vira <b>Produto</b> (Amazon, KaBuM!, Carrefour e Dafiti). Dá pra trocar o tipo depois, no próprio cartão. Seja específico no nome: "tenis nike air max 90" acha bem melhor que "tenis nike". O link da Steam é opcional. Sem ele, o site procura o jogo pelo nome. Cole o link se ele pegar o jogo errado. A imagem vem sozinha da Steam/Amazon, mas dá pra colar um link de imagem pra usar outra.</div>
+  </details>
+
+  <main id="lista"></main>
+</div>
+
+<script>
+const corDe = (loja) => dados?.lojas?.[loja]?.cor || '#9aa1b2';
+const NIVEIS = { oficial: 'Oficial', grande: 'Varejista grande', marketplace: 'Marketplace' };
+const seloConfianca = (c) => c ? `<span class="conf ${c.nivel}" title="${esc(c.texto)}">${NIVEIS[c.nivel]}</span>` : '';
+const reais = (v) => v == null ? '-' : v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+function quando(iso) {
+  if (!iso) return 'nunca';
+  const min = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (min < 1) return 'agora mesmo';
+  if (min < 60) return `há ${min} min`;
+  const h = Math.round(min / 60);
+  if (h < 24) return `há ${h}h`;
+  return new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+}
+
+function imagemDo(produto, historico) {
+  if (produto.imagem) return produto.imagem;
+  const regs = historico.filter((r) => r.produtoId === produto.id).reverse();
+  const steam = regs.find((r) => r.extra?.imagem);
+  if (steam) return steam.extra.imagem;
+  for (const r of regs) {
+    const o = r.ofertas?.find((o) => o.imagem);
+    if (o) return o.imagem;
+  }
+  return null;
+}
+
+const menorOferta = (reg) => reg?.ofertas?.length ? reg.ofertas.reduce((a, b) => (b.preco < a.preco ? b : a)) : null;
+
+function analisar(produto, historico, lojas) {
+  const regs = historico.filter((r) => r.produtoId === produto.id);
+  const porLoja = {};
+  for (const loja of lojas) {
+    const daLoja = regs.filter((r) => r.loja === loja);
+    const ultimo = daLoja[daLoja.length - 1];
+    const serie = daLoja.filter((r) => r.status === 'ok').map((r) => ({ data: r.data, preco: menorOferta(r).preco }));
+    porLoja[loja] = {
+      ultimo,
+      melhor: ultimo?.status === 'ok' ? menorOferta(ultimo) : null,
+      menorHistorico: serie.length ? Math.min(...serie.map((s) => s.preco)) : null,
+      serie,
+    };
+  }
+  const porData = {};
+  for (const r of regs) if (r.status === 'ok') {
+    const p = menorOferta(r).preco;
+    porData[r.data] = Math.min(porData[r.data] ?? Infinity, p);
+  }
+  const geral = Object.values(porData);
+  const atual = lojas.map((l) => porLoja[l].melhor && { ...porLoja[l].melhor, loja: l }).filter(Boolean).sort((a, b) => a.preco - b.preco)[0];
+  return {
+    porLoja, atual,
+    menorHistorico: geral.length ? Math.min(...geral) : null,
+    media: geral.length ? geral.reduce((a, b) => a + b, 0) / geral.length : null,
+    coletas: geral.length,
+  };
+}
+
+function grafico(a, lojas) {
+  const series = lojas.map((l) => ({ loja: l, pts: a.porLoja[l].serie })).filter((s) => s.pts.length);
+  const todos = series.flatMap((s) => s.pts);
+  if (new Set(todos.map((p) => p.data)).size < 2) {
+    return '<div class="vazio">O gráfico aparece a partir da 2ª coleta. O site coleta sozinho a cada 6h enquanto estiver aberto.</div>';
+  }
+  const W = Math.max(300, Math.min(900, (document.querySelector(".container")?.clientWidth || 640) - 70)), H = 170, m = { l: 62, r: 12, t: 10, b: 22 };
+  const tempos = todos.map((p) => +new Date(p.data));
+  const t0 = Math.min(...tempos), t1 = Math.max(...tempos);
+  let p0 = Math.min(...todos.map((p) => p.preco)), p1 = Math.max(...todos.map((p) => p.preco));
+  if (p0 === p1) { p0 *= 0.9; p1 *= 1.1; }
+  const x = (t) => m.l + ((t - t0) / (t1 - t0 || 1)) * (W - m.l - m.r);
+  const y = (p) => m.t + (1 - (p - p0) / (p1 - p0)) * (H - m.t - m.b);
+  let svg = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">`;
+  for (const v of [p0, (p0 + p1) / 2, p1]) {
+    svg += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="#2a2f3a"/>`;
+    svg += `<text x="${m.l - 6}" y="${y(v) + 4}" fill="#9aa1b2" font-size="11" text-anchor="end">${reais(v)}</text>`;
+  }
+  svg += `<text x="${m.l}" y="${H - 4}" fill="#9aa1b2" font-size="11">${new Date(t0).toLocaleDateString('pt-BR')}</text>`;
+  svg += `<text x="${W - m.r}" y="${H - 4}" fill="#9aa1b2" font-size="11" text-anchor="end">${new Date(t1).toLocaleDateString('pt-BR')}</text>`;
+  for (const s of series) {
+    const d = s.pts.map((p, i) => `${i ? 'L' : 'M'}${x(+new Date(p.data)).toFixed(1)},${y(p.preco).toFixed(1)}`).join(' ');
+    svg += `<path d="${d}" fill="none" stroke="${corDe(s.loja)}" stroke-width="2.2" vector-effect="non-scaling-stroke"/>`;
+  }
+  svg += '</svg>';
+  const leg = series.map((s) => `<span><i style="background:${corDe(s.loja)}"></i>${esc(s.loja)}</span>`).join('');
+  return svg + `<div class="legenda">${leg}</div>`;
+}
+
+function linhasLoja(loja, info, ehMelhorLoja, ehJogo) {
+  const nomeLoja = `<i style="background:${corDe(loja)}"></i>${esc(loja)}<br>${seloConfianca(dados.lojas[loja]?.confianca)}`;
+  const u = info.ultimo;
+  if (!u) return `<tr><td class="loja">${nomeLoja}</td><td colspan="3" class="vazio msg">Ainda não coletado</td></tr>`;
+  if (u.status === 'erro') return `<tr><td class="loja">${nomeLoja}</td><td colspan="3" class="erro msg">Falhou: ${esc(u.erro)}</td></tr>`;
+  if (u.status === 'vazio') return `<tr><td class="loja">${nomeLoja}</td><td colspan="3" class="vazio msg">${ehJogo ? 'Não vende esse jogo (ou nenhuma versão de PC)' : 'Nada encontrado com todas as palavras do nome'}</td></tr>`;
+  const ofertas = [...u.ofertas].sort((a, b) => a.preco - b.preco);
+  return ofertas.map((o, i) => `
+    <tr class="${ehMelhorLoja && i === 0 ? 'melhor-linha' : ''} ${i === 0 ? 'primeira' : ''}">
+      <td class="loja">${i === 0 ? nomeLoja : ''}</td>
+      <td><a href="${esc(o.link)}" target="_blank" rel="noopener">${esc(o.titulo)}</a>${
+        o.vendedor || o.obs ? `<div class="detalhe">${o.vendedor ? `⚠ vendido por <b>${esc(o.vendedor)}</b> (parceiro)` : ''}${o.vendedor && o.obs ? ' · ' : ''}${o.obs ? esc(o.obs) : ''}</div>` : ''
+      }</td>
+      <td class="num">${o.desconto ? `<span class="riscado">${reais(o.original)}</span>` : ''}<b>${reais(o.preco)}</b>${o.desconto ? `<span class="desc">-${o.desconto}%</span>` : ''}</td>
+      <td class="num menor">${i === 0 ? reais(info.menorHistorico) : ''}</td>
+    </tr>`).join('');
+}
+
+function cartaoProduto(p, dados) {
+  const lojas = p.lojas;
+  const ehJogo = p.tipo === 'jogo';
+  const a = analisar(p, dados.historico, lojas);
+  const opcoesTipo = Object.entries(dados.tipos)
+    .map(([k, nome]) => `<option value="${k}" ${p.tipo === k ? 'selected' : ''}>${esc(nome)}</option>`).join('');
+  const selos = [];
+  if (a.atual?.desconto) selos.push(`<span class="selo verde">EM PROMOÇÃO −${a.atual.desconto}%</span>`);
+  if (a.atual && a.coletas > 1 && a.atual.preco <= a.menorHistorico && a.media > a.menorHistorico) selos.push('<span class="selo verde">Menor preço já registrado</span>');
+  if (a.atual && a.media && a.coletas > 2 && a.atual.preco < a.media * 0.9) selos.push('<span class="selo amarelo">Abaixo da média</span>');
+  if (a.atual && !a.atual.desconto && selos.length === 0) selos.push('<span class="selo">Preço normal</span>');
+
+  const img = imagemDo(p, dados.historico);
+  const capa = img
+    ? `<img class="capa ${ehJogo ? '' : 'foto'}" src="${esc(img)}" alt="${esc(p.nome)}" loading="lazy" data-letra="${esc(p.nome.charAt(0).toUpperCase())}" onerror="const d=document.createElement('div');d.className='capa sem';d.textContent=this.dataset.letra;this.replaceWith(d)">`
+    : `<div class="capa sem">${esc(p.nome.charAt(0).toUpperCase())}</div>`;
+
+  return `
+  <section class="produto">
+    <div class="produto-topo" ${img ? `style="--fundo-capa: url('${esc(img)}')"` : ''}>
+      ${capa}
+      <div>
+        <div class="tipo-linha">Tipo: <select class="tipo" data-tipo="${esc(p.id)}" title="Trocar o tipo apaga o histórico desse produto e busca de novo">${opcoesTipo}</select></div>
+        <h2>${esc(p.nome)}</h2>
+        ${a.atual
+          ? `<div class="melhor">${reais(a.atual.preco)} <small>na ${esc(a.atual.loja)} · ${esc(a.atual.titulo)}</small></div>`
+          : '<div class="vazio">Sem preço ainda</div>'}
+        <div class="selos">${selos.join('')}</div>
+      </div>
+      <div class="acoes">
+        <button data-atualizar="${esc(p.id)}">↻</button>
+        <button class="perigo" data-remover="${esc(p.id)}" title="Remover produto">✕</button>
+      </div>
+    </div>
+    <div class="produto-corpo">
+
+    <div class="resumo">
+      <div class="caixa"><div class="rotulo">Menor preço já visto</div><div class="valor">${reais(a.menorHistorico)}</div></div>
+      <div class="caixa"><div class="rotulo">Preço médio</div><div class="valor">${reais(a.media)}</div></div>
+      <div class="caixa"><div class="rotulo">Coletas registradas</div><div class="valor">${a.coletas}</div></div>
+    </div>
+
+    <h3>${ehJogo ? 'Preços agora (versões de PC)' : 'Preços agora (mais baratos primeiro)'}</h3>
+    <table>
+      <thead><tr><th>Loja</th><th class="col-titulo">Versão</th><th class="num">Preço</th><th class="num">Menor já visto</th></tr></thead>
+      <tbody>${lojas.map((l) => linhasLoja(l, a.porLoja[l], a.atual?.loja === l, ehJogo)).join('')}</tbody>
+    </table>
+
+    <h3>Histórico</h3>
+    <div class="grafico">${grafico(a, lojas)}</div>
+
+    <h3>Conferir na mão</h3>
+    <div class="manuais">${p.links.map((l) => `<a class="botao" href="${esc(l.url)}" target="_blank" rel="noopener" title="${esc(l.confianca.texto)}">${esc(l.loja)} ↗ ${seloConfianca(l.confianca)}</a>`).join('')}</div>
+    <ul class="avisos">${p.links.map((l) => `<li><b>${esc(l.loja)}:</b> ${esc(l.confianca.texto)}</li>`).join('')}</ul>
+    <div class="dica">Essas lojas bloqueiam consulta automática, então o botão abre a busca já pronta.</div>
+    </div>
+  </section>`;
+}
+
+let dados = null;
+let espera = null;
+let vigia = null;
+
+const CHAVE_TOKEN = 'deolho.token';
+const lerToken = () => { try { return localStorage.getItem(CHAVE_TOKEN) || ''; } catch { return ''; } };
+const salvarToken = (t) => { try { t ? localStorage.setItem(CHAVE_TOKEN, t) : localStorage.removeItem(CHAVE_TOKEN); } catch {} };
+const naNuvem = () => dados?.modo === 'nuvem';
+
+function aviso(texto, tipo = '') {
+  const el = document.getElementById('aviso');
+  el.textContent = texto;
+  el.className = 'aviso visivel ' + tipo;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => (el.className = 'aviso'), tipo === 'erro' ? 9000 : 5000);
+}
+
+async function buscarDados() {
+  try {
+    const r = await fetch('api/dados', { cache: 'no-store' });
+    if (r.ok && (r.headers.get('content-type') || '').includes('json')) return await r.json();
+  } catch {}
+  const r = await fetch('dados.json?t=' + Date.now(), { cache: 'no-store' });
+  if (!r.ok) throw new Error('Não consegui carregar os preços');
+  return r.json();
+}
+
+async function pedirNuvem(inputs) {
+  const token = lerToken();
+  if (!token) {
+    abrirConfig('Pra mexer na lista ou atualizar pelo app, conecte o GitHub primeiro (é só uma vez).');
+    return false;
+  }
+  const r = await fetch(`https://api.github.com/repos/${dados.repo}/actions/workflows/coletar.yml/dispatches`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
+    body: JSON.stringify({ ref: 'main', inputs }),
+  }).catch(() => null);
+  if (!r || !r.ok) {
+    const recusado = r && [401, 403, 404].includes(r.status);
+    aviso(recusado
+      ? 'O GitHub recusou o token. Confira se ele tem "Actions: Read and write" neste repositório (⚙).'
+      : `Não deu pra falar com o GitHub${r ? ` (${r.status})` : ''}. Tenta de novo.`, 'erro');
+    return false;
+  }
+  aviso('Pedido enviado! O GitHub está trabalhando, e a página atualiza sozinha em 1–3 min.', 'ok');
+  esperarNovaVersao();
+  return true;
+}
+
+function esperarNovaVersao() {
+  const antes = dados.geradoEm;
+  let voltas = 0;
+  clearInterval(vigia);
+  document.getElementById('status').textContent = 'Esperando o GitHub terminar…';
+  vigia = setInterval(async () => {
+    voltas++;
+    const d = await buscarDados().catch(() => null);
+    if (d && d.geradoEm !== antes) {
+      clearInterval(vigia); vigia = null;
+      dados = d;
+      desenhar();
+      aviso('Atualizado ✓', 'ok');
+    } else if (voltas > 30) {
+      clearInterval(vigia); vigia = null;
+      desenhar();
+      aviso('Tá demorando mais que o normal. Dá pra ver o andamento no GitHub, na aba Actions.', 'erro');
+    }
+  }, 12000);
+}
+
+async function pedirLocal(caminho, metodo, corpo) {
+  await fetch(caminho, { method: metodo, headers: { 'Content-Type': 'application/json' }, body: corpo ? JSON.stringify(corpo) : undefined });
+}
+
+const acoes = {
+  async atualizar(id) {
+    if (naNuvem()) return pedirNuvem({ acao: 'coletar', id: id || '' });
+    document.getElementById('status').textContent = 'Coletando preços…';
+    document.querySelectorAll('button').forEach((b) => (b.disabled = true));
+    await pedirLocal('api/atualizar', 'POST', { id });
+    document.querySelectorAll('button').forEach((b) => (b.disabled = false));
+    return carregar();
+  },
+  async remover(id) {
+    if (naNuvem()) return pedirNuvem({ acao: 'remover', id });
+    await pedirLocal('api/produtos/' + encodeURIComponent(id), 'DELETE');
+    return carregar();
+  },
+  async tipo(id, tipo) {
+    if (naNuvem()) return pedirNuvem({ acao: 'tipo', id, tipo });
+    document.getElementById('status').textContent = 'Trocando o tipo e buscando de novo…';
+    await pedirLocal('api/produtos/' + encodeURIComponent(id), 'PATCH', { tipo });
+    return carregar();
+  },
+  async adicionar(campos) {
+    if (naNuvem()) {
+      return pedirNuvem({
+        acao: 'adicionar', nome: campos.nome || '', busca: campos.busca || '', tipo: campos.tipo || 'auto',
+        imagem: campos.imagem || '', steam: campos.steamAppId || '',
+      });
+    }
+    await pedirLocal('api/produtos', 'POST', campos);
+    return carregar();
+  },
+};
+
+function desenhar() {
+  document.getElementById('status').textContent = dados.coletando
+    ? 'Coletando preços…'
+    : `Atualizado ${quando(dados.ultimaColeta)} · coleta automática a cada 6h${naNuvem() ? '' : ' com o site aberto'}`;
+  document.getElementById('btnAtualizar').disabled = !!dados.coletando;
+  document.getElementById('btnConfig').hidden = !naNuvem();
+  document.getElementById('lista').innerHTML = dados.produtos.length
+    ? dados.produtos.map((p) => cartaoProduto(p, dados)).join('')
+    : '<div class="vazio-geral">Nenhum produto ainda. Adicione um acima.</div>';
+}
+
+async function carregar() {
+  try {
+    dados = await buscarDados();
+  } catch (e) {
+    document.getElementById('status').textContent = 'Sem conexão: mostrando os últimos preços salvos, se houver.';
+    return;
+  }
+  desenhar();
+  clearTimeout(espera);
+  if (dados.coletando) espera = setTimeout(carregar, 3000);
+}
+
+function abrirConfig(motivo) {
+  const dlg = document.getElementById('config');
+  document.getElementById('configMotivo').textContent = motivo || '';
+  document.getElementById('configMotivo').hidden = !motivo;
+  document.getElementById('configToken').value = '';
+  document.getElementById('configEstado').textContent = lerToken() ? '✓ Este aparelho já está conectado.' : 'Este aparelho ainda não está conectado.';
+  document.getElementById('linkRepo').textContent = dados?.repo?.split('/')[1] || 'o repositório do site';
+  dlg.showModal();
+}
+
+document.getElementById('btnConfig').onclick = () => abrirConfig();
+document.getElementById('configSalvar').onclick = (e) => {
+  e.preventDefault();
+  const t = document.getElementById('configToken').value.trim();
+  if (t) { salvarToken(t); aviso('GitHub conectado neste aparelho ✓', 'ok'); }
+  document.getElementById('config').close();
+};
+document.getElementById('configSair').onclick = (e) => {
+  e.preventDefault();
+  salvarToken('');
+  aviso('Token apagado deste aparelho.');
+  document.getElementById('config').close();
+};
+document.getElementById('configFechar').onclick = () => document.getElementById('config').close();
+
+document.getElementById('btnAtualizar').onclick = () => acoes.atualizar();
+
+document.getElementById('lista').onclick = async (e) => {
+  const at = e.target.closest('[data-atualizar]');
+  const rm = e.target.closest('[data-remover]');
+  if (at) acoes.atualizar(at.dataset.atualizar);
+  if (rm) {
+    if (rm.dataset.confirmar !== '1') {
+      rm.dataset.confirmar = '1'; rm.textContent = 'Remover?';
+      setTimeout(() => { rm.dataset.confirmar = ''; rm.textContent = '✕'; }, 3000);
+      return;
+    }
+    rm.disabled = true;
+    acoes.remover(rm.dataset.remover);
+  }
+};
+
+document.getElementById('lista').onchange = async (e) => {
+  const sel = e.target.closest('[data-tipo]');
+  if (!sel) return;
+  sel.disabled = true;
+  const ok = await acoes.tipo(sel.dataset.tipo, sel.value);
+  if (ok === false) desenhar();
+};
+
+document.getElementById('formAdd').onsubmit = async (e) => {
+  e.preventDefault();
+  const f = e.target;
+  const btn = f.querySelector('button');
+  btn.disabled = true; btn.textContent = 'Enviando…';
+  const ok = await acoes.adicionar(Object.fromEntries(new FormData(f)));
+  if (ok !== false) f.reset();
+  btn.disabled = false; btn.textContent = 'Adicionar';
+};
+
+carregar();
+setInterval(() => { if (!vigia) carregar(); }, 5 * 60000);
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>

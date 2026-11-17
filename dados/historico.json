@@ -1,0 +1,794 @@
+[
+  {
+    "data": "2026-11-17T18:46:29.737Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ]
+  },
+  {
+    "data": "2026-11-17T18:46:29.737Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T18:47:22.538Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ]
+  },
+  {
+    "data": "2026-11-17T18:47:22.538Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T18:48:13.053Z",
+    "produtoId": "hollow-knight",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Hollow Knight",
+        "preco": 46.99,
+        "original": 46.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/367520"
+      }
+    ]
+  },
+  {
+    "data": "2026-11-17T18:48:13.053Z",
+    "produtoId": "hollow-knight",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T18:48:54.465Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ],
+    "extra": {
+      "appId": 1245620,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043"
+    }
+  },
+  {
+    "data": "2026-11-17T18:48:54.465Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T18:50:11.462Z",
+    "produtoId": "outer-wilds",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/753640"
+      }
+    ],
+    "extra": {
+      "appId": 753640,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
+    }
+  },
+  {
+    "data": "2026-11-17T18:50:11.462Z",
+    "produtoId": "outer-wilds",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T18:50:33.449Z",
+    "produtoId": "tenis-nike-air",
+    "loja": "Steam",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T18:50:33.449Z",
+    "produtoId": "tenis-nike-air",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20air%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:25.098Z",
+    "produtoId": "tenis-nike-ayr",
+    "loja": "Steam",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T18:52:25.098Z",
+    "produtoId": "tenis-nike-ayr",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20ayr%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:34.746Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ],
+    "extra": {
+      "appId": 1245620,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:34.746Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:34.746Z",
+    "produtoId": "outer-wilds",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/753640"
+      }
+    ],
+    "extra": {
+      "appId": 753640,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:34.746Z",
+    "produtoId": "outer-wilds",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:34.746Z",
+    "produtoId": "tenis-nike-air",
+    "loja": "Amazon",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Tênis Masculino Nike Air Max SYSTM - Cinza",
+        "preco": 512.9,
+        "original": 512.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51CwmDjSGxL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0FBRV47VY"
+      },
+      {
+        "titulo": "Tênis Nike Air Max SYSTM Preto e Branco Masculino - ORIGINAL (39)",
+        "preco": 512.9,
+        "original": 512.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51hh4NSZXoL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0B6G19YKP"
+      },
+      {
+        "titulo": "Tênis Nike Air Max SYSTM Masculino Preto/Cinza",
+        "preco": 617.4,
+        "original": 617.4,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51o5nNFSfyL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0GJ882LYR"
+      },
+      {
+        "titulo": "Tênis masculino Nike Air Max Alpha Trainer 5",
+        "preco": 683.9,
+        "original": 683.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71mNsWXnr-L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B06XSHXC82"
+      },
+      {
+        "titulo": "Tênis NIKE Air Monarch Iv Training/Workout Shoes masculino",
+        "preco": 958.5,
+        "original": 958.5,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71cZvWBD2EL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B000GMH2VW"
+      }
+    ],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20air"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:34.746Z",
+    "produtoId": "tenis-nike-ayr",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20ayr"
+    }
+  },
+  {
+    "data": "2026-11-17T18:52:42.175Z",
+    "produtoId": "tenis-nike-air",
+    "loja": "Amazon",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Tênis Masculino Nike Air Max SYSTM - Cinza",
+        "preco": 512.9,
+        "original": 512.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51CwmDjSGxL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B07T7JDTFL"
+      },
+      {
+        "titulo": "Tênis Nike Air Max SYSTM Preto e Branco Masculino - ORIGINAL (39)",
+        "preco": 512.9,
+        "original": 512.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51hh4NSZXoL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0B6G19YKP"
+      },
+      {
+        "titulo": "Tênis Nike Air Max SYSTM Masculino Preto/Cinza",
+        "preco": 617.4,
+        "original": 617.4,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51o5nNFSfyL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0CT3XW5DC"
+      },
+      {
+        "titulo": "Tênis masculino Nike Air Max Alpha Trainer 5",
+        "preco": 683.9,
+        "original": 683.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71mNsWXnr-L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0G2RK76LB"
+      },
+      {
+        "titulo": "Tênis Masculino Nike Air Max Fire New - Preto",
+        "preco": 854.9,
+        "original": 854.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/61v7VVDu+cL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0FBRV47VY"
+      },
+      {
+        "titulo": "Tênis NIKE Air Monarch Iv Training/Workout Shoes masculino",
+        "preco": 958.5,
+        "original": 958.5,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71cZvWBD2EL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B000GMH2VW"
+      }
+    ],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20air"
+    }
+  },
+  {
+    "data": "2026-11-17T18:54:06.907Z",
+    "produtoId": "tenis-nike-air",
+    "loja": "Amazon",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Tênis Masculino Nike Air Max SYSTM - Cinza",
+        "preco": 512.9,
+        "original": 512.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51CwmDjSGxL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0FBRV47VY"
+      },
+      {
+        "titulo": "Tênis Nike Air Max SYSTM Preto e Branco Masculino - ORIGINAL (39)",
+        "preco": 512.9,
+        "original": 512.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51hh4NSZXoL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0B6G19YKP"
+      },
+      {
+        "titulo": "Tênis Nike Air Max SYSTM Masculino Preto/Cinza",
+        "preco": 617.4,
+        "original": 617.4,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/51o5nNFSfyL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0GJ882LYR"
+      },
+      {
+        "titulo": "Tênis masculino Nike Air Max Alpha Trainer 5",
+        "preco": 683.9,
+        "original": 683.9,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71mNsWXnr-L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B06XSHXC82"
+      },
+      {
+        "titulo": "Tênis NIKE Air Monarch Iv Training/Workout Shoes masculino",
+        "preco": 958.5,
+        "original": 958.5,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71cZvWBD2EL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B000GMH2VW"
+      }
+    ],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20air"
+    }
+  },
+  {
+    "data": "2026-11-17T18:54:24.618Z",
+    "produtoId": "tenis-nike-air-2",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T18:57:08.076Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ],
+    "extra": {
+      "appId": 1245620,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043"
+    }
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "elden-ring",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "outer-wilds",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/753640"
+      }
+    ],
+    "extra": {
+      "appId": 753640,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
+    }
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "outer-wilds",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "outer-wilds",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Amazon",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 1372.19,
+        "original": 1372.19,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/719+OAEO00L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0FMMKZF2D"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 2018.67,
+        "original": 2018.67,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71HrD6BtEFL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0DYL97H4C"
+      },
+      {
+        "titulo": "Tênis Nike Masculino Nike Alphafly 3 Para Corrida em Asfalto Para Competições",
+        "preco": 2018.67,
+        "original": 2018.67,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71HrD6BtEFL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0F4M63DDB"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 2897.12,
+        "original": 2897.12,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71krYcYY29L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0DYVTN2ZG"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 5350.43,
+        "original": 5350.43,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/717btOL6UGL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0GT1Y34PV"
+      }
+    ],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20alphafly"
+    }
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "KaBuM!",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Carrefour",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:00:54.454Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Dafiti",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ],
+    "extra": {
+      "appId": 1245620,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043"
+    }
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "elden-ring",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "elden-ring",
+    "loja": "Nuuvem",
+    "status": "erro",
+    "erro": "Nuuvem respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "outer-wilds",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/753640"
+      }
+    ],
+    "extra": {
+      "appId": 753640,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
+    }
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "outer-wilds",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "outer-wilds",
+    "loja": "Nuuvem",
+    "status": "erro",
+    "erro": "Nuuvem respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "outer-wilds",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Amazon",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 1372.19,
+        "original": 1372.19,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/719+OAEO00L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0FMMKZF2D"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 2018.67,
+        "original": 2018.67,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71HrD6BtEFL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0DYL97H4C"
+      },
+      {
+        "titulo": "Tênis Nike Masculino Nike Alphafly 3 Para Corrida em Asfalto Para Competições",
+        "preco": 2018.67,
+        "original": 2018.67,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71HrD6BtEFL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0F4M63DDB"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 2897.12,
+        "original": 2897.12,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71krYcYY29L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0DYVTN2ZG"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 5350.43,
+        "original": 5350.43,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/717btOL6UGL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0GT1Y34PV"
+      }
+    ],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20alphafly"
+    }
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "KaBuM!",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Carrefour",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:04:28.561Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Dafiti",
+    "status": "vazio",
+    "ofertas": []
+  }
+]
