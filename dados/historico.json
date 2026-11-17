@@ -1109,5 +1109,698 @@
     "loja": "Dafiti",
     "status": "vazio",
     "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ],
+    "extra": {
+      "appId": 1245620,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "elden-ring",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "elden-ring",
+    "loja": "Nuuvem",
+    "status": "erro",
+    "erro": "Nuuvem respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/753640"
+      }
+    ],
+    "extra": {
+      "appId": 753640,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds",
+    "loja": "Nuuvem",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "imagem": "https://assets.nuuvem.com/image/upload/v1/products/6247468b4391263ad090db8b/banners/ddh9jqsoilq2uf234xpx.jpg",
+        "link": "https://www.nuuvem.com/br-pt/item/outer-wilds"
+      }
+    ]
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "KaBuM!",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Carrefour",
+    "status": "erro",
+    "erro": "Carrefour respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Dafiti",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "echo-point-nova",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Echo Point Nova",
+        "preco": 36.99,
+        "original": 73.98,
+        "desconto": 50,
+        "link": "https://store.steampowered.com/app/1836730"
+      }
+    ],
+    "extra": {
+      "appId": 1836730,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1836730/80d80e7510d9df1659801115516cf0100bc85cf2/header.jpg?t=1775572906"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "echo-point-nova",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "echo-point-nova",
+    "loja": "Nuuvem",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "echo-point-nova",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "bodycam",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Bodycam",
+        "preco": 81.59,
+        "original": 101.99,
+        "desconto": 20,
+        "link": "https://store.steampowered.com/app/2406770"
+      }
+    ],
+    "extra": {
+      "appId": 2406770,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2406770/b533bca55927692f0cf812ebb91c6e6e8f5cb4a6/header_alt_assets_4.jpg?t=1794683329"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "bodycam",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "bodycam",
+    "loja": "Nuuvem",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "bodycam",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "iron-saga-vs",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Iron Saga VS",
+        "preco": 88.99,
+        "original": 88.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/2463800"
+      }
+    ],
+    "extra": {
+      "appId": 2463800,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2463800/7774331213eaa683d223a3cb36297d0c23297973/header.jpg?t=1786335117"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "iron-saga-vs",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "iron-saga-vs",
+    "loja": "Nuuvem",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "iron-saga-vs",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "endacopia",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Endacopia",
+        "preco": 58.26,
+        "original": 58.26,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/2684630"
+      }
+    ],
+    "extra": {
+      "appId": 2684630,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2684630/8b5af90a03ce4cc33653c50a998387e3e9082103/header.jpg?t=1786381683"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "endacopia",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "endacopia",
+    "loja": "Nuuvem",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "endacopia",
+    "loja": "Amazon",
+    "status": "erro",
+    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "mindwave",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 2701030,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2701030/header.jpg?t=1766950305",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/2701030"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "shot-one-fighters",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 2945040,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2945040/da25b134c768d69271b0b247ca1b20a6c271d04a/header.jpg?t=1781624413",
+      "lancamento": "Em breve",
+      "link": "https://store.steampowered.com/app/2945040"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "stonemachia",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Stonemachia",
+        "preco": 59.99,
+        "original": 59.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/2982610"
+      }
+    ],
+    "extra": {
+      "appId": 2982610,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2982610/8efb61a9b71968711b74eb54980cfa6ef4ea9ab1/header.jpg?t=1794583197"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "stonemachia",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "stonemachia",
+    "loja": "Nuuvem",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "stonemachia",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=Stonemachia%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "hyperfunk",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3183480,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3183480/7ee936241e2ad26d903a003db0e1c2c91daea3ae/header.jpg?t=1785851836",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/3183480"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds-echoes-of-the-eye",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds - Echoes of the Eye",
+        "preco": 43.99,
+        "original": 43.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1622100"
+      }
+    ],
+    "extra": {
+      "appId": 1622100,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1622100/header.jpg?t=1701451540"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds-echoes-of-the-eye",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds-echoes-of-the-eye",
+    "loja": "Nuuvem",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds - Echoes of the Eye",
+        "preco": 43.99,
+        "original": 43.99,
+        "desconto": 0,
+        "imagem": "https://assets.nuuvem.com/image/upload/v1/products/624753bd224d3600191bf5ce/banners/nxoskqymoulu4vxssppz.jpg",
+        "link": "https://www.nuuvem.com/br-pt/item/outer-wilds-echoes-of-the-eye"
+      }
+    ]
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "outer-wilds-echoes-of-the-eye",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=Outer%20Wilds%20-%20Echoes%20of%20the%20Eye%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "tides-of-annihilation",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3292470,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3292470/6ff5e6000c8ca199f44af13ec40a683e1921b114/header.jpg?t=1788250889",
+      "lancamento": "Em breve",
+      "link": "https://store.steampowered.com/app/3292470"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "jinn-hunter",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3353590,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3353590/header.jpg?t=1738610796",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/3353590"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "dead-as-disco",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Dead as Disco",
+        "preco": 75.01,
+        "original": 75.01,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/3404260"
+      }
+    ],
+    "extra": {
+      "appId": 3404260,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3404260/ae0f4b71735adf4f2494ecb7914fcbafee215277/header.jpg?t=1794248455"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "dead-as-disco",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "dead-as-disco",
+    "loja": "Nuuvem",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Dead as Disco",
+        "preco": 75.01,
+        "original": 75.01,
+        "desconto": 0,
+        "imagem": "https://assets.nuuvem.com/image/upload/v1/products/69fa2bce363a60e4078111f0/banner/s5plbabgepr6ap5i2pwx.jpg",
+        "link": "https://www.nuuvem.com/br-pt/item/dead-as-disco"
+      }
+    ]
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "dead-as-disco",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=Dead%20as%20Disco%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "i-have-no-change",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3426150,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3426150/header.jpg?t=1779138020",
+      "lancamento": "2027",
+      "link": "https://store.steampowered.com/app/3426150"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "metamorphosis",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3470140,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3470140/4953646a2a710c0f76b23e01d3788f76131ac9ee/header.jpg?t=1794091458",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/3470140"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "cascade",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3749900,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3749900/2104e9944e373d8573b484c47f7cec9f2f55832c/header.jpg?t=1794562362",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/3749900"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "eye-of-the-match-the-var-game",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3799530,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3799530/7d49d3cd2efcb87368dddc30ced96c539f404d63/header.jpg?t=1793295002",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/3799530"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "generic-fighter-maybe",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 3925750,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3925750/da41b251917fb1369737c6d755a6aad41cbb6609/header.jpg?t=1794814672",
+      "lancamento": "Em breve",
+      "link": "https://store.steampowered.com/app/3925750"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "beat-for-speed",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Beat For Speed",
+        "preco": 46.99,
+        "original": 46.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/4430260"
+      }
+    ],
+    "extra": {
+      "appId": 4430260,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4430260/4a61918d29f110b0c44bfa630976753cb36424e4/header.jpg?t=1793806313"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "beat-for-speed",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "beat-for-speed",
+    "loja": "Nuuvem",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "beat-for-speed",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=Beat%20For%20Speed%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "meccha-chameleon",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "MECCHA CHAMELEON",
+        "preco": 23.49,
+        "original": 23.49,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/4704690"
+      }
+    ],
+    "extra": {
+      "appId": 4704690,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/163e2a742e5fb8e1f5d1e3a890da98f04ab809d4/header.jpg?t=1789464996"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "meccha-chameleon",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "meccha-chameleon",
+    "loja": "Nuuvem",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "meccha-chameleon",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=MECCHA%20CHAMELEON%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "call-of-cutie",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 4968940,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4968940/b635db34e5913a0df534919603ee3386cd52e8d4/header.jpg?t=1788260714",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/4968940"
+    }
+  },
+  {
+    "data": "2026-11-17T20:25:09.769Z",
+    "produtoId": "chrono-punk",
+    "loja": "Steam",
+    "status": "embreve",
+    "ofertas": [],
+    "extra": {
+      "appId": 5081550,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5081550/c59f2bb2a541b4c600432c7597acbbf61ad7be33/header.jpg?t=1793917974",
+      "lancamento": "Por anunciar",
+      "link": "https://store.steampowered.com/app/5081550"
+    }
   }
 ]
