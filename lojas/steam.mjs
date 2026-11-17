@@ -32,6 +32,14 @@ export async function steam(produto) {
   const d = dados.data;
   const link = `https://store.steampowered.com/app/${appId}`;
 
+  if (d.release_date?.coming_soon && !d.price_overview && !d.is_free) {
+    return {
+      status: 'embreve',
+      ofertas: [],
+      extra: { appId, imagem: d.header_image, lancamento: d.release_date.date || 'a ser anunciada', link },
+    };
+  }
+
   if (d.is_free) {
     return { status: 'ok', ofertas: [{ titulo: d.name, preco: 0, original: 0, desconto: 0, link }] };
   }

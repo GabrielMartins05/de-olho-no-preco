@@ -59,7 +59,8 @@ export async function coletarProduto(produto, data = new Date().toISOString()) {
         const descartados = r.ofertas.length - ofertas.length;
         if (descartados) console.log(`  ${loja}: ${descartados} link(s) fora do domínio oficial descartado(s)`);
         console.log(`  ${loja}: ${ofertas.length} oferta(s)`);
-        return { data, produtoId: produto.id, loja, status: ofertas.length ? 'ok' : 'vazio', ofertas, extra: r.extra };
+        const status = r.status === 'embreve' ? 'embreve' : ofertas.length ? 'ok' : 'vazio';
+        return { data, produtoId: produto.id, loja, status, ofertas, extra: r.extra };
       } catch (e) {
         console.log(`  ${loja}: ERRO ${e.message}`);
         return { data, produtoId: produto.id, loja, status: 'erro', erro: e.message, ofertas: [] };
@@ -73,6 +74,7 @@ export async function coletarProduto(produto, data = new Date().toISOString()) {
   if (steam) {
     const r = await consultar(steam, produto);
     registros.push(r);
+    if (r.status === 'embreve') return registros;
     if (r.ofertas.length) prod = { ...produto, edicoes: r.ofertas.map((o) => o.titulo) };
   }
   registros.push(...(await Promise.all(resto.map((l) => consultar(l, prod)))));

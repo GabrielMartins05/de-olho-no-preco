@@ -39,6 +39,36 @@ export async function trocarTipo(id, tipo) {
   return true;
 }
 
+export async function sincronizarWishlist(steamId) {
+  const { lerWishlist } = await import('./lojas/wishlist.mjs');
+  const desejos = await lerWishlist(steamId);
+  if (!desejos.length) {
+    console.log('Lista de desejos vazia ou privada, nada mudou');
+    return { adicionados: [], removidos: [] };
+  }
+  const produtos = await lerJSON(ARQ_PRODUTOS, []);
+  const naLista = new Set(desejos.map((d) => d.appid));
+  const adicionados = [];
+  for (const d of desejos) {
+    const existente = produtos.find((p) => p.steamAppId === d.appid);
+    if (existente) continue;
+    let id = normalizar(d.nome).replace(/ /g, '-') || `jogo-${d.appid}`;
+    while (produtos.some((p) => p.id === id)) id += '-2';
+    const novo = { id, nome: d.nome, busca: d.nome, steamAppId: d.appid, tipo: 'jogo', origem: 'wishlist' };
+    produtos.push(novo);
+    adicionados.push(novo);
+  }
+  const saem = produtos.filter((p) => p.origem === 'wishlist' && !naLista.has(p.steamAppId));
+  const idsQueSaem = new Set(saem.map((p) => p.id));
+  await salvarJSON(ARQ_PRODUTOS, produtos.filter((p) => !idsQueSaem.has(p.id)));
+  if (idsQueSaem.size) {
+    const historico = await lerJSON(ARQ_HISTORICO, []);
+    await salvarJSON(ARQ_HISTORICO, historico.filter((r) => !idsQueSaem.has(r.produtoId)));
+  }
+  console.log(`Lista de desejos: ${desejos.length} jogos · ${adicionados.length} novo(s) · ${saem.length} saiu/saíram`);
+  return { adicionados, removidos: saem };
+}
+
 export async function montarDados(extra = {}) {
   const produtos = await lerJSON(ARQ_PRODUTOS, []);
   const historico = await lerJSON(ARQ_HISTORICO, []);

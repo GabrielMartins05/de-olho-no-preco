@@ -1,5 +1,5 @@
 import { coletarTudo } from './coletor.mjs';
-import { adicionarProduto, removerProduto, trocarTipo } from './produtos.mjs';
+import { adicionarProduto, removerProduto, trocarTipo, sincronizarWishlist } from './produtos.mjs';
 
 const e = process.env;
 const acao = (e.ACAO || 'coletar').trim();
@@ -24,10 +24,20 @@ switch (acao) {
     if (await trocarTipo(id, (e.TIPO || '').trim())) await coletarTudo(id);
     mensagem = `Troca tipo de ${id} para ${e.TIPO}`;
     break;
-  case 'coletar':
+  case 'coletar': {
+    let extra = '';
+    if (!id && e.STEAM_ID) {
+      try {
+        const { adicionados, removidos } = await sincronizarWishlist(e.STEAM_ID.trim());
+        if (adicionados.length || removidos.length) extra = ` (lista de desejos: +${adicionados.length} −${removidos.length})`;
+      } catch (erro) {
+        console.log(`Não deu pra ler a lista de desejos: ${erro.message}`);
+      }
+    }
     await coletarTudo(id || undefined);
-    mensagem = id ? `Atualiza preços de ${id}` : 'Atualiza preços';
+    mensagem = (id ? `Atualiza preços de ${id}` : 'Atualiza preços') + extra;
     break;
+  }
   default:
     throw new Error(`Ação desconhecida: ${acao}`);
 }
