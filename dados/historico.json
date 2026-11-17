@@ -790,5 +790,188 @@
     "loja": "Dafiti",
     "status": "vazio",
     "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "elden-ring",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "ELDEN RING",
+        "preco": 274.5,
+        "original": 274.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Edition",
+        "preco": 365.5,
+        "original": 365.5,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      },
+      {
+        "titulo": "ELDEN RING Shadow of the Erdtree Deluxe Edition",
+        "preco": 456.9,
+        "original": 456.9,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1245620"
+      }
+    ],
+    "extra": {
+      "appId": 1245620,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1790290043"
+    }
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "elden-ring",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "elden-ring",
+    "loja": "Nuuvem",
+    "status": "erro",
+    "erro": "Nuuvem respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "elden-ring",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "outer-wilds",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/753640"
+      }
+    ],
+    "extra": {
+      "appId": 753640,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
+    }
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "outer-wilds",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "outer-wilds",
+    "loja": "Nuuvem",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Outer Wilds",
+        "preco": 67.99,
+        "original": 67.99,
+        "desconto": 0,
+        "imagem": "https://assets.nuuvem.com/image/upload/v1/products/6247468b4391263ad090db8b/banners/ddh9jqsoilq2uf234xpx.jpg",
+        "link": "https://www.nuuvem.com/br-pt/item/outer-wilds"
+      }
+    ]
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "outer-wilds",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
+    }
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Amazon",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 1372.19,
+        "original": 1372.19,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/719+OAEO00L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0DYKY2VFX"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 2018.67,
+        "original": 2018.67,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71HrD6BtEFL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0DYL97H4C"
+      },
+      {
+        "titulo": "Tênis Nike Masculino Nike Alphafly 3 Para Corrida em Asfalto Para Competições",
+        "preco": 2018.67,
+        "original": 2018.67,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71HrD6BtEFL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0F4M63DDB"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 2897.12,
+        "original": 2897.12,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/71krYcYY29L._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0DYVTN2ZG"
+      },
+      {
+        "titulo": "Nike Alphafly 3 Herren-straßenlaufschuh Für Wettkämpfe Tênis masculino",
+        "preco": 5350.43,
+        "original": 5350.43,
+        "desconto": 0,
+        "imagem": "https://m.media-amazon.com/images/I/717btOL6UGL._AC_UL320_.jpg",
+        "link": "https://www.amazon.com.br/dp/B0GT1Y34PV"
+      }
+    ],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=tenis%20nike%20alphafly"
+    }
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "KaBuM!",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Carrefour",
+    "status": "erro",
+    "erro": "Carrefour respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T19:25:26.840Z",
+    "produtoId": "tenis-nike-alphafly",
+    "loja": "Dafiti",
+    "status": "vazio",
+    "ofertas": []
   }
 ]
