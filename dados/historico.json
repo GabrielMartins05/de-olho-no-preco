@@ -1890,5 +1890,49 @@
     "extra": {
       "busca": "https://www.amazon.com.br/s?k=MECCHA%20CHAMELEON%20pc"
     }
+  },
+  {
+    "data": "2026-11-17T21:12:13.521Z",
+    "produtoId": "haste",
+    "loja": "Steam",
+    "status": "ok",
+    "ofertas": [
+      {
+        "titulo": "Haste",
+        "preco": 59.99,
+        "original": 59.99,
+        "desconto": 0,
+        "link": "https://store.steampowered.com/app/1796470"
+      }
+    ],
+    "extra": {
+      "appId": 1796470,
+      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1796470/header.jpg?t=1775640343"
+    }
+  },
+  {
+    "data": "2026-11-17T21:12:13.521Z",
+    "produtoId": "haste",
+    "loja": "GOG",
+    "status": "vazio",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T21:12:13.521Z",
+    "produtoId": "haste",
+    "loja": "Nuuvem",
+    "status": "erro",
+    "erro": "Nuuvem respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
+    "ofertas": []
+  },
+  {
+    "data": "2026-11-17T21:12:13.521Z",
+    "produtoId": "haste",
+    "loja": "Amazon",
+    "status": "vazio",
+    "ofertas": [],
+    "extra": {
+      "busca": "https://www.amazon.com.br/s?k=haste%20pc"
+    }
   }
 ]

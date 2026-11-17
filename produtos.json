@@ -74,5 +74,11 @@
     "busca": "MECCHA CHAMELEON",
     "steamAppId": 4704690,
     "tipo": "jogo"
+  },
+  {
+    "id": "haste",
+    "nome": "haste",
+    "busca": "haste",
+    "tipo": "jogo"
   }
 ]
