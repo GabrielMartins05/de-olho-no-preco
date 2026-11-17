@@ -50,15 +50,68 @@
   button:disabled { opacity: .5; cursor: wait; }
   button.perigo:hover { border-color: var(--vermelho); color: var(--vermelho); }
 
-  .adicionar { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; padding: 14px; margin-bottom: 20px; }
-  .adicionar summary { cursor: pointer; font-weight: 600; }
-  .adicionar form { display: grid; grid-template-columns: 1.4fr 1.4fr 1fr 1fr 1fr auto; gap: 8px; margin-top: 12px; }
   select.tipo { padding: 4px 8px; font-size: 13px; background: rgba(15,17,21,.6); cursor: pointer; }
   .tipo-linha { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px; color: var(--suave); }
-  .adicionar input, .adicionar select, select.tipo {
+  .campo, select.tipo {
     background: var(--fundo); color: var(--texto); border: 1px solid var(--borda);
-    border-radius: 8px; padding: 8px 10px; font: inherit; min-width: 0;
+    border-radius: 8px; padding: 9px 11px; font: inherit; min-width: 0;
   }
+  .campo:focus { outline: none; border-color: var(--verde); }
+
+  .busca { position: relative; margin-bottom: 12px; }
+  .busca input {
+    width: 100%; font-size: 17px; padding: 14px 16px 14px 46px; border-radius: 14px;
+    background: var(--cartao); border: 1px solid var(--borda); color: var(--texto); font-family: inherit;
+  }
+  .busca input:focus { outline: none; border-color: var(--verde); }
+  .busca::before { content: "⌕"; position: absolute; left: 16px; top: 50%; transform: translateY(-52%); font-size: 22px; color: var(--suave); pointer-events: none; }
+  .filtros { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .filtros label { font-size: 13px; color: var(--suave); display: flex; align-items: center; gap: 8px; }
+  .faixa { flex: 1; min-width: 240px; display: flex; align-items: center; gap: 12px; }
+  .faixa-texto { font-size: 13px; color: var(--texto); white-space: nowrap; min-width: 150px; font-variant-numeric: tabular-nums; }
+  .duplo { position: relative; flex: 1; height: 28px; }
+  .duplo .trilho { position: absolute; left: 0; right: 0; top: 12px; height: 4px; border-radius: 4px; background: var(--borda); }
+  .duplo .ativo { position: absolute; top: 12px; height: 4px; border-radius: 4px; background: var(--verde); }
+  .duplo input {
+    position: absolute; inset: 0; width: 100%; margin: 0; background: none; pointer-events: none;
+    -webkit-appearance: none; appearance: none; height: 28px;
+  }
+  .duplo input::-webkit-slider-thumb {
+    -webkit-appearance: none; pointer-events: auto; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--texto); border: 3px solid var(--verde); cursor: pointer;
+  }
+  .duplo input::-moz-range-thumb {
+    pointer-events: auto; width: 16px; height: 16px; border-radius: 50%; background: var(--texto); border: 3px solid var(--verde); cursor: pointer;
+  }
+  .duplo input::-moz-range-track { background: none; }
+  .contagem { font-size: 13px; color: var(--suave); margin: -4px 0 10px; }
+  .limpar { background: none; border: 0; color: var(--azul); padding: 0; font-size: 13px; }
+
+  .grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+  .item {
+    background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; overflow: hidden; cursor: pointer;
+    display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; text-align: left; padding: 0; color: var(--texto); font: inherit;
+    transition: transform .12s ease, border-color .12s ease;
+  }
+  .item:hover { transform: translateY(-2px); border-color: #3a4150; }
+  .item .img { width: 100%; aspect-ratio: 460 / 215; object-fit: cover; display: block; background: var(--cartao2); }
+  .item .img.foto { object-fit: contain; background: #fff; padding: 6px; }
+  .item .img.sem { display: grid; place-items: center; font-size: 34px; font-weight: 700; color: var(--suave); }
+  .item .info { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .item .nome { font-size: 14px; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .item .preco { margin-top: auto; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+  .item .preco b { font-size: 18px; letter-spacing: -.3px; }
+  .item .preco .riscado { margin: 0; }
+  .item .chip { font-size: 11.5px; font-weight: 700; color: #0b1a10; background: var(--verde); padding: 1px 6px; border-radius: 6px; }
+  .item .sem-preco { font-size: 13px; color: var(--suave); }
+  .nada { grid-column: 1 / -1; text-align: center; color: var(--suave); padding: 36px 10px; }
+  .nada button { margin-top: 10px; }
+
+  .voltar { margin-bottom: 14px; }
+  [hidden] { display: none !important; }
+
+  .form-add { display: grid; gap: 10px; }
+  .form-add .campo { width: 100%; font-size: 16px; }
   .dica { color: var(--suave); font-size: 12px; margin-top: 6px; }
 
   .produto { background: var(--cartao); border: 1px solid var(--borda); border-radius: 14px; padding: 20px; margin-bottom: 20px; }
@@ -163,8 +216,16 @@
     header { align-items: stretch; }
     .topo-botoes { width: 100%; }
     .topo-botoes .principal { flex: 1; justify-content: center; padding: 11px; }
-    .adicionar form { grid-template-columns: 1fr; }
-    .adicionar input, .adicionar select { padding: 11px 10px; font-size: 16px; }
+    .grade { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .item .info { padding: 8px 10px 10px; }
+    .item .nome { font-size: 13px; }
+    .item .preco b { font-size: 16px; }
+    .filtros { gap: 10px; }
+    .filtros label, .filtros select { width: 100%; }
+    .filtros select { flex: 1; }
+    .faixa { min-width: 100%; flex-wrap: wrap; gap: 4px; }
+    .faixa-texto { min-width: 0; }
+    .duplo { flex-basis: 100%; }
     .resumo { grid-template-columns: repeat(3, 1fr); gap: 6px; }
     .caixa { padding: 8px; }
     .caixa .valor { font-size: 14px; }
@@ -200,7 +261,8 @@
       <div class="status" id="status">Carregando…</div>
     </div>
     <div class="topo-botoes">
-      <button class="principal" id="btnAtualizar">↻ Atualizar preços agora</button>
+      <button class="principal" id="btnAdicionar">＋ Adicionar</button>
+      <button id="btnAtualizar" title="Atualizar todos os preços agora">↻ Atualizar</button>
       <button id="btnConfig" title="Conectar ao GitHub" hidden>⚙</button>
     </div>
   </header>
@@ -230,24 +292,55 @@
     </div>
   </dialog>
 
-  <details class="adicionar">
-    <summary>＋ Adicionar produto</summary>
-    <form id="formAdd">
-      <input name="nome" placeholder="Nome (ex: Hollow Knight, Tênis Nike Air Max 90)" required>
-      <select name="tipo" title="O que é o produto?">
+  <dialog id="dlgAdicionar">
+    <h2>Adicionar produto</h2>
+    <form id="formAdd" class="form-add">
+      <input class="campo" name="nome" placeholder="Nome (ex: Hollow Knight, Tênis Nike Air Max 90)" required>
+      <select class="campo" name="tipo" title="O que é o produto?">
         <option value="auto">Tipo: detectar sozinho</option>
         <option value="jogo">Jogo de PC</option>
         <option value="produto">Produto (tênis, roupa, eletrônico…)</option>
       </select>
-      <input name="busca" placeholder="Termo de busca (opcional)">
-      <input name="steamAppId" placeholder="Link/ID Steam (opcional)">
-      <input name="imagem" placeholder="Link da imagem (opcional)">
-      <button class="principal" type="submit">Adicionar</button>
+      <input class="campo" name="busca" placeholder="Termo de busca (opcional)">
+      <input class="campo" name="steamAppId" placeholder="Link/ID Steam (opcional)">
+      <input class="campo" name="imagem" placeholder="Link da imagem (opcional)">
+      <div class="dica">Se o nome for de um jogo da Steam, ele vira <b>Jogo de PC</b> (Steam, GOG, Nuuvem e Amazon). Se não for, vira <b>Produto</b> (Amazon, KaBuM!, Carrefour e Dafiti). Seja específico: "tenis nike air max 90" acha melhor que "tenis nike".</div>
+      <div class="linha-botoes">
+        <button type="button" id="addFechar">Cancelar</button>
+        <button class="principal" type="submit">Adicionar</button>
+      </div>
     </form>
-    <div class="dica">No modo "detectar sozinho", se o nome for de um jogo da Steam ele vira <b>Jogo de PC</b> (Steam, GOG, Nuuvem e Amazon). Se não for, vira <b>Produto</b> (Amazon, KaBuM!, Carrefour e Dafiti). Dá pra trocar o tipo depois, no próprio cartão. Seja específico no nome: "tenis nike air max 90" acha bem melhor que "tenis nike". O link da Steam é opcional. Sem ele, o site procura o jogo pelo nome. Cole o link se ele pegar o jogo errado. A imagem vem sozinha da Steam/Amazon, mas dá pra colar um link de imagem pra usar outra.</div>
-  </details>
+  </dialog>
 
-  <main id="lista"></main>
+  <section id="telaLista">
+    <div class="busca"><input id="busca" type="search" placeholder="Pesquisar nos seus produtos…" autocomplete="off" enterkeyhint="search"></div>
+    <div class="filtros">
+      <label>Ordem
+        <select id="ordem" class="campo">
+          <option value="az">Alfabética (A–Z)</option>
+          <option value="za">Alfabética (Z–A)</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+          <option value="desconto">Maior desconto</option>
+        </select>
+      </label>
+      <div class="faixa">
+        <span class="faixa-texto" id="faixaTexto">R$ 1 – R$ 5.000</span>
+        <div class="duplo">
+          <div class="trilho"></div><div class="ativo" id="faixaAtiva"></div>
+          <input type="range" id="precoMin" min="0" max="1000" value="0" aria-label="Preço mínimo">
+          <input type="range" id="precoMax" min="0" max="1000" value="1000" aria-label="Preço máximo">
+        </div>
+      </div>
+    </div>
+    <div class="contagem" id="contagem"></div>
+    <main id="grade" class="grade"></main>
+  </section>
+
+  <section id="telaDetalhe" hidden>
+    <button class="voltar" id="btnVoltar">← Voltar</button>
+    <div id="lista"></div>
+  </section>
 </div>
 
 <script>
@@ -531,19 +624,113 @@ const acoes = {
   },
 };
 
+const PRECO_MIN = 1, PRECO_MAX = 5000;
+const posParaPreco = (v) => Math.round(PRECO_MIN + (PRECO_MAX - PRECO_MIN) * (v / 1000) ** 2);
+const inteiro = (v) => 'R$ ' + v.toLocaleString('pt-BR');
+const filtros = (() => {
+  try { return { ordem: 'az', min: 0, max: 1000, ...JSON.parse(localStorage.getItem('deolho.filtros') || '{}') }; }
+  catch { return { ordem: 'az', min: 0, max: 1000 }; }
+})();
+const salvarFiltros = () => { try { localStorage.setItem('deolho.filtros', JSON.stringify(filtros)); } catch {} };
+
+function ajustarFaixa() {
+  const a = Math.min(filtros.min, filtros.max), b = Math.max(filtros.min, filtros.max);
+  const ativa = document.getElementById('faixaAtiva');
+  ativa.style.left = (a / 10) + '%';
+  ativa.style.width = ((b - a) / 10) + '%';
+  const pMin = posParaPreco(a), pMax = posParaPreco(b);
+  document.getElementById('faixaTexto').textContent = `${inteiro(pMin)} – ${inteiro(pMax)}${b === 1000 ? '+' : ''}`;
+}
+
+const filtroDePrecoAtivo = () => filtros.min > 0 || filtros.max < 1000;
+
+function itemDaGrade(p) {
+  const a = analisar(p, dados.historico, p.lojas);
+  const img = imagemDo(p, dados.historico);
+  const letra = esc(p.nome.charAt(0).toUpperCase());
+  const foto = p.tipo === 'jogo' ? '' : 'foto';
+  const imagem = img
+    ? `<img class="img ${foto}" src="${esc(img)}" alt="" loading="lazy" data-letra="${letra}" onerror="const d=document.createElement('div');d.className='img sem';d.textContent=this.dataset.letra;this.replaceWith(d)">`
+    : `<div class="img sem">${letra}</div>`;
+  const preco = a.atual
+    ? `<div class="preco">${a.atual.desconto ? `<span class="chip">−${a.atual.desconto}%</span>` : ''}<b>${reais(a.atual.preco)}</b>${a.atual.desconto ? `<span class="riscado">${reais(a.atual.original)}</span>` : ''}</div>`
+    : `<div class="preco"><span class="sem-preco">${emBreve(p) ? 'Ainda não lançado' : 'Sem preço no momento'}</span></div>`;
+  return `<button class="item" data-abrir="${esc(p.id)}">${imagem}<div class="info"><div class="nome">${esc(p.nome)}</div>${preco}</div></button>`;
+}
+
+function desenharLista() {
+  const termo = normalizarBusca(document.getElementById('busca').value);
+  const pMin = posParaPreco(Math.min(filtros.min, filtros.max)), pMax = posParaPreco(Math.max(filtros.min, filtros.max));
+  const semTeto = Math.max(filtros.min, filtros.max) === 1000;
+
+  let itens = dados.produtos.map((p) => ({ p, atual: analisar(p, dados.historico, p.lojas).atual }));
+  if (termo) itens = itens.filter(({ p }) => normalizarBusca(p.nome).includes(termo));
+  if (filtroDePrecoAtivo()) {
+    itens = itens.filter(({ atual }) => atual && atual.preco >= pMin && (semTeto || atual.preco <= pMax));
+  }
+  const nome = (x) => x.p.nome;
+  const preco = (x) => x.atual?.preco;
+  const comparar = {
+    az: (x, y) => nome(x).localeCompare(nome(y), 'pt-BR', { sensitivity: 'base' }),
+    za: (x, y) => nome(y).localeCompare(nome(x), 'pt-BR', { sensitivity: 'base' }),
+    menor: (x, y) => (preco(x) ?? Infinity) - (preco(y) ?? Infinity),
+    maior: (x, y) => (preco(y) ?? -Infinity) - (preco(x) ?? -Infinity),
+    desconto: (x, y) => (y.atual?.desconto || 0) - (x.atual?.desconto || 0),
+  }[filtros.ordem] || (() => 0);
+  itens.sort(comparar);
+
+  const total = dados.produtos.length;
+  const filtrando = termo || filtroDePrecoAtivo();
+  document.getElementById('contagem').innerHTML = filtrando
+    ? `${itens.length} de ${total} produto${total === 1 ? '' : 's'} · <button class="limpar" id="limparFiltros">limpar filtros</button>`
+    : `${total} produto${total === 1 ? '' : 's'}`;
+
+  const textoBusca = document.getElementById('busca').value.trim();
+  document.getElementById('grade').innerHTML = itens.length
+    ? itens.map(({ p }) => itemDaGrade(p)).join('')
+    : `<div class="nada">${total ? 'Nada encontrado com esses filtros.' : 'Nenhum produto ainda.'}${
+        textoBusca ? `<br><button class="principal" id="addDaBusca">＋ Adicionar "${esc(textoBusca)}"</button>` : ''
+      }</div>`;
+}
+
+const normalizarBusca = (t) => String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+
+const idAberto = () => decodeURIComponent((location.hash.match(/^#p=(.+)$/) || [])[1] || '');
+let rolagemDaLista = 0;
+
+function mostrarTela() {
+  const id = idAberto();
+  const p = id && dados?.produtos.find((x) => x.id === id);
+  const lista = document.getElementById('telaLista'), detalhe = document.getElementById('telaDetalhe');
+  if (p) {
+    if (!lista.hidden) rolagemDaLista = window.scrollY;
+    lista.hidden = true;
+    detalhe.hidden = false;
+    document.getElementById('lista').innerHTML = cartaoProduto(p, dados);
+    window.scrollTo(0, 0);
+  } else {
+    const voltando = lista.hidden;
+    detalhe.hidden = true;
+    lista.hidden = false;
+    desenharLista();
+    if (voltando) window.scrollTo(0, rolagemDaLista);
+  }
+}
+
+let veioDaLista = false;
+function abrirProduto(id) { veioDaLista = true; location.hash = 'p=' + encodeURIComponent(id); }
+function voltarPraLista() {
+  if (veioDaLista) { veioDaLista = false; history.back(); }
+  else history.replaceState(null, '', location.pathname + location.search), mostrarTela();
+}
+
 function desenhar() {
   document.getElementById('status').textContent = dados.coletando
     ? 'Coletando preços…'
     : `Atualizado ${quando(dados.ultimaColeta)} · coleta automática a cada 6h${naNuvem() ? '' : ' com o site aberto'}`;
   document.getElementById('btnAtualizar').disabled = !!dados.coletando;
   document.getElementById('btnConfig').hidden = !naNuvem();
-  if (!dados.produtos.length) {
-    document.getElementById('lista').innerHTML = '<div class="vazio-geral">Nenhum produto ainda. Adicione um acima.</div>';
-    return;
-  }
-  const descontoAtual = (p) => analisar(p, dados.historico, p.lojas).atual?.desconto || 0;
-  const ordem = [...dados.produtos].sort((x, y) => descontoAtual(y) - descontoAtual(x));
-  document.getElementById('lista').innerHTML = ordem.map((p) => cartaoProduto(p, dados)).join('');
+  mostrarTela();
 }
 
 async function carregar() {
@@ -596,9 +783,49 @@ document.getElementById('lista').onclick = async (e) => {
       return;
     }
     rm.disabled = true;
-    acoes.remover(rm.dataset.remover);
+    const ok = await acoes.remover(rm.dataset.remover);
+    if (ok !== false) voltarPraLista();
   }
 };
+
+document.getElementById('grade').onclick = (e) => {
+  const item = e.target.closest('[data-abrir]');
+  if (item) return abrirProduto(item.dataset.abrir);
+  if (e.target.closest('#addDaBusca')) {
+    abrirAdicionar(document.getElementById('busca').value.trim());
+  }
+};
+document.getElementById('contagem').onclick = (e) => {
+  if (!e.target.closest('#limparFiltros')) return;
+  document.getElementById('busca').value = '';
+  Object.assign(filtros, { min: 0, max: 1000 });
+  document.getElementById('precoMin').value = 0;
+  document.getElementById('precoMax').value = 1000;
+  salvarFiltros(); ajustarFaixa(); desenharLista();
+};
+document.getElementById('busca').oninput = () => desenharLista();
+document.getElementById('ordem').value = filtros.ordem;
+document.getElementById('ordem').onchange = (e) => { filtros.ordem = e.target.value; salvarFiltros(); desenharLista(); };
+for (const [id, chave] of [['precoMin', 'min'], ['precoMax', 'max']]) {
+  const el = document.getElementById(id);
+  el.value = filtros[chave];
+  el.oninput = () => { filtros[chave] = Number(el.value); ajustarFaixa(); if (dados) desenharLista(); };
+  el.onchange = salvarFiltros;
+}
+ajustarFaixa();
+
+document.getElementById('btnVoltar').onclick = voltarPraLista;
+window.addEventListener('hashchange', () => { if (!idAberto()) veioDaLista = false; if (dados) mostrarTela(); });
+
+function abrirAdicionar(nome = '') {
+  const f = document.getElementById('formAdd');
+  f.reset();
+  f.nome.value = nome;
+  document.getElementById('dlgAdicionar').showModal();
+  if (!nome) f.nome.focus();
+}
+document.getElementById('btnAdicionar').onclick = () => abrirAdicionar();
+document.getElementById('addFechar').onclick = () => document.getElementById('dlgAdicionar').close();
 
 document.getElementById('lista').onchange = async (e) => {
   const sel = e.target.closest('[data-tipo]');
@@ -614,8 +841,13 @@ document.getElementById('formAdd').onsubmit = async (e) => {
   const btn = f.querySelector('button');
   btn.disabled = true; btn.textContent = 'Enviando…';
   const ok = await acoes.adicionar(Object.fromEntries(new FormData(f)));
-  if (ok !== false) f.reset();
   btn.disabled = false; btn.textContent = 'Adicionar';
+  if (ok !== false) {
+    f.reset();
+    document.getElementById('dlgAdicionar').close();
+    document.getElementById('busca').value = '';
+    if (dados) desenharLista();
+  }
 };
 
 carregar();
