@@ -138,35 +138,6 @@
     }
   },
   {
-    "data": "2026-11-17T18:50:11.462Z",
-    "produtoId": "outer-wilds",
-    "loja": "Steam",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "link": "https://store.steampowered.com/app/753640"
-      }
-    ],
-    "extra": {
-      "appId": 753640,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
-    }
-  },
-  {
-    "data": "2026-11-17T18:50:11.462Z",
-    "produtoId": "outer-wilds",
-    "loja": "Amazon",
-    "status": "vazio",
-    "ofertas": [],
-    "extra": {
-      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
-    }
-  },
-  {
     "data": "2026-11-17T18:50:33.449Z",
     "produtoId": "tenis-nike-air",
     "loja": "Steam",
@@ -241,35 +212,6 @@
     "ofertas": [],
     "extra": {
       "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T18:52:34.746Z",
-    "produtoId": "outer-wilds",
-    "loja": "Steam",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "link": "https://store.steampowered.com/app/753640"
-      }
-    ],
-    "extra": {
-      "appId": 753640,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
-    }
-  },
-  {
-    "data": "2026-11-17T18:52:34.746Z",
-    "produtoId": "outer-wilds",
-    "loja": "Amazon",
-    "status": "vazio",
-    "ofertas": [],
-    "extra": {
-      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
     }
   },
   {
@@ -511,42 +453,6 @@
   },
   {
     "data": "2026-11-17T19:00:54.454Z",
-    "produtoId": "outer-wilds",
-    "loja": "Steam",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "link": "https://store.steampowered.com/app/753640"
-      }
-    ],
-    "extra": {
-      "appId": 753640,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
-    }
-  },
-  {
-    "data": "2026-11-17T19:00:54.454Z",
-    "produtoId": "outer-wilds",
-    "loja": "GOG",
-    "status": "vazio",
-    "ofertas": []
-  },
-  {
-    "data": "2026-11-17T19:00:54.454Z",
-    "produtoId": "outer-wilds",
-    "loja": "Amazon",
-    "status": "vazio",
-    "ofertas": [],
-    "extra": {
-      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T19:00:54.454Z",
     "produtoId": "tenis-nike-alphafly",
     "loja": "Amazon",
     "status": "ok",
@@ -677,50 +583,6 @@
   },
   {
     "data": "2026-11-17T19:04:28.561Z",
-    "produtoId": "outer-wilds",
-    "loja": "Steam",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "link": "https://store.steampowered.com/app/753640"
-      }
-    ],
-    "extra": {
-      "appId": 753640,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
-    }
-  },
-  {
-    "data": "2026-11-17T19:04:28.561Z",
-    "produtoId": "outer-wilds",
-    "loja": "GOG",
-    "status": "vazio",
-    "ofertas": []
-  },
-  {
-    "data": "2026-11-17T19:04:28.561Z",
-    "produtoId": "outer-wilds",
-    "loja": "Nuuvem",
-    "status": "erro",
-    "erro": "Nuuvem respondeu 403 (bloqueio temporário, tenta de novo mais tarde)",
-    "ofertas": []
-  },
-  {
-    "data": "2026-11-17T19:04:28.561Z",
-    "produtoId": "outer-wilds",
-    "loja": "Amazon",
-    "status": "vazio",
-    "ofertas": [],
-    "extra": {
-      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T19:04:28.561Z",
     "produtoId": "tenis-nike-alphafly",
     "loja": "Amazon",
     "status": "ok",
@@ -847,58 +709,6 @@
     "ofertas": [],
     "extra": {
       "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T19:25:26.840Z",
-    "produtoId": "outer-wilds",
-    "loja": "Steam",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "link": "https://store.steampowered.com/app/753640"
-      }
-    ],
-    "extra": {
-      "appId": 753640,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
-    }
-  },
-  {
-    "data": "2026-11-17T19:25:26.840Z",
-    "produtoId": "outer-wilds",
-    "loja": "GOG",
-    "status": "vazio",
-    "ofertas": []
-  },
-  {
-    "data": "2026-11-17T19:25:26.840Z",
-    "produtoId": "outer-wilds",
-    "loja": "Nuuvem",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "imagem": "https://assets.nuuvem.com/image/upload/v1/products/6247468b4391263ad090db8b/banners/ddh9jqsoilq2uf234xpx.jpg",
-        "link": "https://www.nuuvem.com/br-pt/item/outer-wilds"
-      }
-    ]
-  },
-  {
-    "data": "2026-11-17T19:25:26.840Z",
-    "produtoId": "outer-wilds",
-    "loja": "Amazon",
-    "status": "vazio",
-    "ofertas": [],
-    "extra": {
-      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
     }
   },
   {
@@ -1032,56 +842,6 @@
   },
   {
     "data": "2026-11-17T20:18:02.314Z",
-    "produtoId": "outer-wilds",
-    "loja": "Steam",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "link": "https://store.steampowered.com/app/753640"
-      }
-    ],
-    "extra": {
-      "appId": 753640,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
-    }
-  },
-  {
-    "data": "2026-11-17T20:18:02.314Z",
-    "produtoId": "outer-wilds",
-    "loja": "GOG",
-    "status": "vazio",
-    "ofertas": []
-  },
-  {
-    "data": "2026-11-17T20:18:02.314Z",
-    "produtoId": "outer-wilds",
-    "loja": "Nuuvem",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "imagem": "https://assets.nuuvem.com/image/upload/v1/products/6247468b4391263ad090db8b/banners/ddh9jqsoilq2uf234xpx.jpg",
-        "link": "https://www.nuuvem.com/br-pt/item/outer-wilds"
-      }
-    ]
-  },
-  {
-    "data": "2026-11-17T20:18:02.314Z",
-    "produtoId": "outer-wilds",
-    "loja": "Amazon",
-    "status": "erro",
-    "erro": "Amazon respondeu 503 (bloqueio temporário, tenta de novo mais tarde)",
-    "ofertas": []
-  },
-  {
-    "data": "2026-11-17T20:18:02.314Z",
     "produtoId": "tenis-nike-alphafly",
     "loja": "Amazon",
     "status": "erro",
@@ -1166,58 +926,6 @@
     "ofertas": [],
     "extra": {
       "busca": "https://www.amazon.com.br/s?k=elden%20ring%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "outer-wilds",
-    "loja": "Steam",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "link": "https://store.steampowered.com/app/753640"
-      }
-    ],
-    "extra": {
-      "appId": 753640,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/079ae4a7ff4b5875adc5c63c4c0b84e5a3e6966b/header.jpg?t=1785424341"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "outer-wilds",
-    "loja": "GOG",
-    "status": "vazio",
-    "ofertas": []
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "outer-wilds",
-    "loja": "Nuuvem",
-    "status": "ok",
-    "ofertas": [
-      {
-        "titulo": "Outer Wilds",
-        "preco": 67.99,
-        "original": 67.99,
-        "desconto": 0,
-        "imagem": "https://assets.nuuvem.com/image/upload/v1/products/6247468b4391263ad090db8b/banners/ddh9jqsoilq2uf234xpx.jpg",
-        "link": "https://www.nuuvem.com/br-pt/item/outer-wilds"
-      }
-    ]
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "outer-wilds",
-    "loja": "Amazon",
-    "status": "vazio",
-    "ofertas": [],
-    "extra": {
-      "busca": "https://www.amazon.com.br/s?k=outer%20wilds%20pc"
     }
   },
   {
