@@ -61,7 +61,8 @@ jobs:
           BUSCA: ${{ inputs.busca }}
           TIPO: ${{ inputs.tipo }}
           IMAGEM: ${{ inputs.imagem }}
-          STEAM: ${{ inputs.steam }}        run: node gerenciar.mjs
+          STEAM: ${{ inputs.steam }}
+        run: node gerenciar.mjs
 
       - name: Salvar dados no repositório
         env:
