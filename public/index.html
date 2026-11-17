@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>De Olho no Preço</title>
-<meta name="theme-color" content="#0f1115">
+<meta name="theme-color" content="#0b0d12">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="De Olho">
@@ -13,10 +13,13 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
   :root {
-    --fundo: #0f1115;
-    --cartao: #171a21;
-    --cartao2: #1e222b;
-    --borda: #2a2f3a;
+    --fundo: #0b0d12;
+    --cartao: #151922;
+    --cartao2: #1c212c;
+    --borda: #262c39;
+    --verde2: #2bc4b0;
+    --brilho: rgba(61,220,132,.35);
+    --ease: cubic-bezier(.2,.8,.2,1);
     --texto: #e8eaf0;
     --suave: #9aa1b2;
     --verde: #3ddc84;
@@ -64,7 +67,7 @@
     background: var(--cartao); border: 1px solid var(--borda); color: var(--texto); font-family: inherit;
   }
   .busca input:focus { outline: none; border-color: var(--verde); }
-  .busca::before { content: "⌕"; position: absolute; left: 16px; top: 50%; transform: translateY(-52%); font-size: 22px; color: var(--suave); pointer-events: none; }
+  .busca::before { content: "⌕"; z-index: 1; position: absolute; left: 16px; top: 50%; transform: translateY(-52%); font-size: 22px; color: var(--suave); pointer-events: none; }
   .filtros { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
   .filtros label { font-size: 13px; color: var(--suave); display: flex; align-items: center; gap: 8px; }
   .faixa { flex: 1; min-width: 240px; display: flex; align-items: center; gap: 12px; }
@@ -112,6 +115,78 @@
 
   .form-add { display: grid; gap: 10px; }
   .form-add .campo { width: 100%; font-size: 16px; }
+
+  body {
+    background:
+      radial-gradient(900px 500px at 10% -10%, rgba(61,220,132,.10), transparent 60%),
+      radial-gradient(800px 500px at 100% 0%, rgba(90,169,255,.09), transparent 60%),
+      var(--fundo);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1 span {
+    background: linear-gradient(90deg, var(--verde), var(--verde2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  button, .botao { transition: border-color .15s, background .15s, transform .1s var(--ease), box-shadow .2s; }
+  button:active:not(:disabled), .botao:active { transform: scale(.96); }
+  button.principal {
+    background: linear-gradient(135deg, var(--verde), var(--verde2)); border-color: transparent;
+    box-shadow: 0 4px 14px rgba(61,220,132,.25);
+  }
+  button.principal:hover:not(:disabled) { box-shadow: 0 6px 22px rgba(61,220,132,.4); border-color: transparent; }
+
+  .busca input { background: rgba(21,25,34,.75); backdrop-filter: blur(8px); transition: border-color .2s, box-shadow .2s; }
+  .busca input:focus { box-shadow: 0 0 0 4px rgba(61,220,132,.15); }
+  .campo { transition: border-color .2s, box-shadow .2s; }
+  .campo:focus { box-shadow: 0 0 0 3px rgba(61,220,132,.15); }
+
+  .duplo .ativo { background: linear-gradient(90deg, var(--verde), var(--verde2)); box-shadow: 0 0 10px var(--brilho); }
+  .duplo input::-webkit-slider-thumb { transition: transform .15s var(--ease), box-shadow .15s; box-shadow: 0 0 0 0 var(--brilho); }
+  .duplo input::-webkit-slider-thumb:hover, .duplo input:active::-webkit-slider-thumb { transform: scale(1.15); box-shadow: 0 0 0 6px rgba(61,220,132,.18); }
+
+  .item {
+    background: linear-gradient(180deg, rgba(28,33,44,.9), rgba(21,25,34,.95));
+    box-shadow: 0 1px 0 rgba(255,255,255,.03) inset, 0 6px 18px rgba(0,0,0,.25);
+    transition: transform .2s var(--ease), border-color .2s, box-shadow .25s;
+  }
+  .grade.animar .item { animation: surgir .45s var(--ease) both; animation-delay: calc(min(var(--i, 0), 16) * 35ms); }
+  .item:hover { transform: translateY(-4px); border-color: rgba(61,220,132,.45); box-shadow: 0 12px 28px rgba(0,0,0,.4), 0 0 0 1px rgba(61,220,132,.15), 0 0 24px rgba(61,220,132,.12); }
+  .item:active { transform: translateY(-1px) scale(.98); }
+  .item .moldura { overflow: hidden; position: relative; }
+  .item .img { transition: transform .45s var(--ease), filter .3s; }
+  .item:hover .img { transform: scale(1.06); filter: saturate(1.15); }
+  .item .chip { background: linear-gradient(135deg, var(--verde), var(--verde2)); animation: pulso 2.4s ease-in-out infinite; }
+  .item.promo { border-color: rgba(61,220,132,.3); }
+
+  .fantasma { pointer-events: none; animation: none; }
+  .fantasma .img, .fantasma .linha {
+    background: linear-gradient(90deg, var(--cartao2) 0%, #262c39 50%, var(--cartao2) 100%);
+    background-size: 200% 100%; animation: brilhar 1.2s linear infinite;
+  }
+  .fantasma .linha { height: 12px; border-radius: 6px; }
+  .fantasma .linha.curta { width: 45%; height: 16px; margin-top: 8px; }
+
+  #telaDetalhe.entrando, #telaLista.entrando { animation: deslizar .35s var(--ease) both; }
+  .produto { box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+  .resumo .caixa { transition: transform .2s var(--ease); }
+  .resumo .caixa:hover { transform: translateY(-2px); }
+  .melhor { background: linear-gradient(90deg, #fff, #c9f5dc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  dialog[open] { animation: abrirJanela .25s var(--ease); }
+  dialog[open]::backdrop { animation: escurecer .25s ease; backdrop-filter: blur(3px); }
+  .aviso { backdrop-filter: blur(10px); background: rgba(28,33,44,.92); }
+
+  @keyframes surgir { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes deslizar { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+  @keyframes abrirJanela { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
+  @keyframes escurecer { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes brilhar { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+  @keyframes pulso { 0%, 100% { box-shadow: 0 0 0 0 rgba(61,220,132,.0); } 50% { box-shadow: 0 0 0 4px rgba(61,220,132,.18); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
   .dica { color: var(--suave); font-size: 12px; margin-top: 6px; }
 
   .produto { background: var(--cartao); border: 1px solid var(--borda); border-radius: 14px; padding: 20px; margin-bottom: 20px; }
@@ -334,7 +409,7 @@
       </div>
     </div>
     <div class="contagem" id="contagem"></div>
-    <main id="grade" class="grade"></main>
+    <main id="grade" class="grade"><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div><div class="item fantasma"><div class="img"></div><div class="info"><div class="linha"></div><div class="linha curta"></div></div></div></main>
   </section>
 
   <section id="telaDetalhe" hidden>
@@ -644,7 +719,7 @@ function ajustarFaixa() {
 
 const filtroDePrecoAtivo = () => filtros.min > 0 || filtros.max < 1000;
 
-function itemDaGrade(p) {
+function itemDaGrade(p, i = 0) {
   const a = analisar(p, dados.historico, p.lojas);
   const img = imagemDo(p, dados.historico);
   const letra = esc(p.nome.charAt(0).toUpperCase());
@@ -655,10 +730,12 @@ function itemDaGrade(p) {
   const preco = a.atual
     ? `<div class="preco">${a.atual.desconto ? `<span class="chip">−${a.atual.desconto}%</span>` : ''}<b>${reais(a.atual.preco)}</b>${a.atual.desconto ? `<span class="riscado">${reais(a.atual.original)}</span>` : ''}</div>`
     : `<div class="preco"><span class="sem-preco">${emBreve(p) ? 'Ainda não lançado' : 'Sem preço no momento'}</span></div>`;
-  return `<button class="item" data-abrir="${esc(p.id)}">${imagem}<div class="info"><div class="nome">${esc(p.nome)}</div>${preco}</div></button>`;
+  return `<button class="item${a.atual?.desconto ? ' promo' : ''}" style="--i:${i}" data-abrir="${esc(p.id)}"><div class="moldura">${imagem}</div><div class="info"><div class="nome">${esc(p.nome)}</div>${preco}</div></button>`;
 }
 
-function desenharLista() {
+let jaDesenhou = false;
+function desenharLista(animar = false) {
+  document.getElementById('grade').classList.toggle('animar', animar);
   const termo = normalizarBusca(document.getElementById('busca').value);
   const pMin = posParaPreco(Math.min(filtros.min, filtros.max)), pMax = posParaPreco(Math.max(filtros.min, filtros.max));
   const semTeto = Math.max(filtros.min, filtros.max) === 1000;
@@ -687,7 +764,7 @@ function desenharLista() {
 
   const textoBusca = document.getElementById('busca').value.trim();
   document.getElementById('grade').innerHTML = itens.length
-    ? itens.map(({ p }) => itemDaGrade(p)).join('')
+    ? itens.map(({ p }, i) => itemDaGrade(p, i)).join('')
     : `<div class="nada">${total ? 'Nada encontrado com esses filtros.' : 'Nenhum produto ainda.'}${
         textoBusca ? `<br><button class="principal" id="addDaBusca">＋ Adicionar "${esc(textoBusca)}"</button>` : ''
       }</div>`;
@@ -704,17 +781,25 @@ function mostrarTela() {
   const lista = document.getElementById('telaLista'), detalhe = document.getElementById('telaDetalhe');
   if (p) {
     if (!lista.hidden) rolagemDaLista = window.scrollY;
+    const abrindo = detalhe.hidden;
     lista.hidden = true;
     detalhe.hidden = false;
     document.getElementById('lista').innerHTML = cartaoProduto(p, dados);
-    window.scrollTo(0, 0);
+    if (abrindo) { window.scrollTo(0, 0); animarEntrada(detalhe); }
   } else {
     const voltando = lista.hidden;
     detalhe.hidden = true;
     lista.hidden = false;
-    desenharLista();
-    if (voltando) window.scrollTo(0, rolagemDaLista);
+    desenharLista(voltando || !jaDesenhou);
+    jaDesenhou = true;
+    if (voltando) { window.scrollTo(0, rolagemDaLista); animarEntrada(lista); }
   }
+}
+
+function animarEntrada(el) {
+  el.classList.remove('entrando');
+  void el.offsetWidth;
+  el.classList.add('entrando');
 }
 
 let veioDaLista = false;
