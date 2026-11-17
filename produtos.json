@@ -24,167 +24,62 @@
     "nome": "Echo Point Nova",
     "busca": "Echo Point Nova",
     "steamAppId": 1836730,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "bodycam",
     "nome": "Bodycam",
     "busca": "Bodycam",
     "steamAppId": 2406770,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "iron-saga-vs",
     "nome": "Iron Saga VS",
     "busca": "Iron Saga VS",
     "steamAppId": 2463800,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "endacopia",
     "nome": "Endacopia",
     "busca": "Endacopia",
     "steamAppId": 2684630,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "mindwave",
-    "nome": "MINDWAVE",
-    "busca": "MINDWAVE",
-    "steamAppId": 2701030,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "shot-one-fighters",
-    "nome": "Shot One Fighters",
-    "busca": "Shot One Fighters",
-    "steamAppId": 2945040,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "stonemachia",
     "nome": "Stonemachia",
     "busca": "Stonemachia",
     "steamAppId": 2982610,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "hyperfunk",
-    "nome": "HYPERFUNK",
-    "busca": "HYPERFUNK",
-    "steamAppId": 3183480,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "outer-wilds-echoes-of-the-eye",
     "nome": "Outer Wilds - Echoes of the Eye",
     "busca": "Outer Wilds - Echoes of the Eye",
     "steamAppId": 1622100,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "tides-of-annihilation",
-    "nome": "Tides of Annihilation",
-    "busca": "Tides of Annihilation",
-    "steamAppId": 3292470,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "jinn-hunter",
-    "nome": "Jinn Hunter",
-    "busca": "Jinn Hunter",
-    "steamAppId": 3353590,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "dead-as-disco",
     "nome": "Dead as Disco",
     "busca": "Dead as Disco",
     "steamAppId": 3404260,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "i-have-no-change",
-    "nome": "I Have No Change",
-    "busca": "I Have No Change",
-    "steamAppId": 3426150,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "metamorphosis",
-    "nome": "METAMORPHOSIS",
-    "busca": "METAMORPHOSIS",
-    "steamAppId": 3470140,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "cascade",
-    "nome": "CASCADE",
-    "busca": "CASCADE",
-    "steamAppId": 3749900,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "eye-of-the-match-the-var-game",
-    "nome": "Eye of the Match: The VAR Game",
-    "busca": "Eye of the Match: The VAR Game",
-    "steamAppId": 3799530,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "generic-fighter-maybe",
-    "nome": "Generic Fighter Maybe",
-    "busca": "Generic Fighter Maybe",
-    "steamAppId": 3925750,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "beat-for-speed",
     "nome": "Beat For Speed",
     "busca": "Beat For Speed",
     "steamAppId": 4430260,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   },
   {
     "id": "meccha-chameleon",
     "nome": "MECCHA CHAMELEON",
     "busca": "MECCHA CHAMELEON",
     "steamAppId": 4704690,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "call-of-cutie",
-    "nome": "CALL OF CUTIE",
-    "busca": "CALL OF CUTIE",
-    "steamAppId": 4968940,
-    "tipo": "jogo",
-    "origem": "wishlist"
-  },
-  {
-    "id": "chrono-punk",
-    "nome": "CHRONO PUNK",
-    "busca": "CHRONO PUNK",
-    "steamAppId": 5081550,
-    "tipo": "jogo",
-    "origem": "wishlist"
+    "tipo": "jogo"
   }
 ]

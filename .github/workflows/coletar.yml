@@ -61,9 +61,7 @@ jobs:
           BUSCA: ${{ inputs.busca }}
           TIPO: ${{ inputs.tipo }}
           IMAGEM: ${{ inputs.imagem }}
-          STEAM: ${{ inputs.steam }}
-          STEAM_ID: ${{ secrets.STEAM_ID }} # ID da Steam pra sincronizar a lista de desejos (segredo)
-        run: node gerenciar.mjs
+          STEAM: ${{ inputs.steam }}        run: node gerenciar.mjs
 
       - name: Salvar dados no repositório
         env:

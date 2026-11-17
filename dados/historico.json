@@ -1416,32 +1416,6 @@
   },
   {
     "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "mindwave",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 2701030,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2701030/header.jpg?t=1766950305",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/2701030"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "shot-one-fighters",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 2945040,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2945040/da25b134c768d69271b0b247ca1b20a6c271d04a/header.jpg?t=1781624413",
-      "lancamento": "Em breve",
-      "link": "https://store.steampowered.com/app/2945040"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
     "produtoId": "stonemachia",
     "loja": "Steam",
     "status": "ok",
@@ -1481,19 +1455,6 @@
     "ofertas": [],
     "extra": {
       "busca": "https://www.amazon.com.br/s?k=Stonemachia%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "hyperfunk",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3183480,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3183480/7ee936241e2ad26d903a003db0e1c2c91daea3ae/header.jpg?t=1785851836",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/3183480"
     }
   },
   {
@@ -1550,32 +1511,6 @@
   },
   {
     "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "tides-of-annihilation",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3292470,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3292470/6ff5e6000c8ca199f44af13ec40a683e1921b114/header.jpg?t=1788250889",
-      "lancamento": "Em breve",
-      "link": "https://store.steampowered.com/app/3292470"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "jinn-hunter",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3353590,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3353590/header.jpg?t=1738610796",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/3353590"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
     "produtoId": "dead-as-disco",
     "loja": "Steam",
     "status": "ok",
@@ -1624,71 +1559,6 @@
     "ofertas": [],
     "extra": {
       "busca": "https://www.amazon.com.br/s?k=Dead%20as%20Disco%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "i-have-no-change",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3426150,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3426150/header.jpg?t=1779138020",
-      "lancamento": "2027",
-      "link": "https://store.steampowered.com/app/3426150"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "metamorphosis",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3470140,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3470140/4953646a2a710c0f76b23e01d3788f76131ac9ee/header.jpg?t=1794091458",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/3470140"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "cascade",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3749900,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3749900/2104e9944e373d8573b484c47f7cec9f2f55832c/header.jpg?t=1794562362",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/3749900"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "eye-of-the-match-the-var-game",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3799530,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3799530/7d49d3cd2efcb87368dddc30ced96c539f404d63/header.jpg?t=1793295002",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/3799530"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "generic-fighter-maybe",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 3925750,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3925750/da41b251917fb1369737c6d755a6aad41cbb6609/header.jpg?t=1794814672",
-      "lancamento": "Em breve",
-      "link": "https://store.steampowered.com/app/3925750"
     }
   },
   {
@@ -1775,32 +1645,6 @@
     "ofertas": [],
     "extra": {
       "busca": "https://www.amazon.com.br/s?k=MECCHA%20CHAMELEON%20pc"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "call-of-cutie",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 4968940,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4968940/b635db34e5913a0df534919603ee3386cd52e8d4/header.jpg?t=1788260714",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/4968940"
-    }
-  },
-  {
-    "data": "2026-11-17T20:25:09.769Z",
-    "produtoId": "chrono-punk",
-    "loja": "Steam",
-    "status": "embreve",
-    "ofertas": [],
-    "extra": {
-      "appId": 5081550,
-      "imagem": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5081550/c59f2bb2a541b4c600432c7597acbbf61ad7be33/header.jpg?t=1793917974",
-      "lancamento": "Por anunciar",
-      "link": "https://store.steampowered.com/app/5081550"
     }
   }
 ]
